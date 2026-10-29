@@ -1,0 +1,434 @@
+/* ==========================================================================
+   SmartAssist AI — Functional Sidebar Styles & Dark Theme
+   Preserves Stitch Design Language & Design System Tokens (DESIGN.md)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Smooth Transitions for Collapse / Expand
+   -------------------------------------------------------------------------- */
+aside.fixed.left-0,
+aside.w-\[260px\] {
+  transition: width 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+div.pl-\[260px\],
+header.fixed.top-0,
+div.fixed.bottom-0 {
+  transition: padding-left 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              left 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. Collapsed Sidebar State
+   -------------------------------------------------------------------------- */
+body.sidebar-collapsed aside.fixed.left-0,
+body.sidebar-collapsed aside.w-\[260px\] {
+  width: 72px !important;
+}
+
+body.sidebar-collapsed div.pl-\[260px\] {
+  padding-left: 72px !important;
+}
+
+body.sidebar-collapsed header.fixed.top-0 {
+  left: 72px !important;
+}
+
+body.sidebar-collapsed div.fixed.bottom-0 {
+  left: 72px !important;
+}
+
+/* Hide labels and non-icon elements when collapsed */
+body.sidebar-collapsed aside.fixed.left-0 .sidebar-label,
+body.sidebar-collapsed aside.fixed.left-0 .sidebar-brand-text,
+body.sidebar-collapsed aside.fixed.left-0 .sidebar-section-header,
+body.sidebar-collapsed aside.fixed.left-0 .sidebar-hide-collapsed {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Brand header in collapsed mode */
+body.sidebar-collapsed aside.fixed.left-0 .h-16.px-space-md {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+  justify-content: center !important;
+}
+
+body.sidebar-collapsed aside.fixed.left-0 .h-16.px-space-md > div:first-child {
+  display: none !important;
+}
+
+body.sidebar-collapsed #sidebar-collapse-btn {
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+/* New Chat button collapsed: compact icon circle */
+body.sidebar-collapsed aside .px-space-md.pt-space-xs.pb-space-sm {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+body.sidebar-collapsed #sidebar-new-chat-btn {
+  width: 44px !important;
+  height: 44px !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  border-radius: 9999px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body.sidebar-collapsed #sidebar-new-chat-btn span:not(.material-symbols-outlined) {
+  display: none !important;
+}
+
+/* Search input collapsed */
+body.sidebar-collapsed #sidebar-search-container {
+  display: none !important;
+}
+
+body.sidebar-collapsed aside .px-space-md.py-space-xs {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+body.sidebar-collapsed #sidebar-search-btn-collapsed {
+  display: flex !important;
+  margin: 0 auto !important;
+}
+
+#sidebar-search-btn-collapsed {
+  display: none;
+}
+
+/* Navigation items in collapsed mode: centered icons */
+body.sidebar-collapsed aside nav {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+body.sidebar-collapsed aside nav a {
+  justify-content: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 44px !important;
+  height: 40px !important;
+  margin: 0 auto !important;
+}
+
+body.sidebar-collapsed aside nav a span:not(.material-symbols-outlined) {
+  display: none !important;
+}
+
+body.sidebar-collapsed aside nav a span.material-symbols-outlined {
+  font-size: 22px !important;
+  margin: 0 !important;
+}
+
+/* Recent chats in collapsed mode: HIDE ONLY header and list, NEVER the parent! */
+body.sidebar-collapsed #sidebar-recent-header,
+body.sidebar-collapsed #sidebar-recent-chats-list {
+  display: none !important;
+}
+
+/* Theme toggle in collapsed mode: vertical stack */
+body.sidebar-collapsed .sidebar-bottom-controls {
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+body.sidebar-collapsed #sidebar-theme-toggle {
+  flex-direction: column !important;
+  gap: 4px !important;
+  padding: 4px !important;
+  background-color: transparent !important;
+}
+
+body.sidebar-collapsed #theme-btn-light,
+body.sidebar-collapsed #theme-btn-dark {
+  width: 34px !important;
+  height: 30px !important;
+  padding: 0 !important;
+  justify-content: center !important;
+  border-radius: 8px !important;
+}
+
+body.sidebar-collapsed #theme-btn-light span:not(.material-symbols-outlined),
+body.sidebar-collapsed #theme-btn-dark span:not(.material-symbols-outlined) {
+  display: none !important;
+}
+
+body.sidebar-collapsed #sidebar-dock-btn {
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+/* Bottom footer row in collapsed mode */
+body.sidebar-collapsed aside .p-space-md.bg-surface-container\/50 {
+  padding: 0.75rem 0.35rem !important;
+  align-items: center !important;
+}
+
+body.sidebar-collapsed #sidebar-profile-section {
+  justify-content: center !important;
+  padding: 0.25rem 0 !important;
+}
+
+body.sidebar-collapsed #sidebar-profile-section > div {
+  display: none !important;
+}
+
+body.sidebar-collapsed #sidebar-profile-section img {
+  width: 38px !important;
+  height: 38px !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Theme Overrides (Dark Mode according to DESIGN.md)
+   -------------------------------------------------------------------------- */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark,
+html.dark body,
+html.dark .bg-surface {
+  background-color: #151520 !important;
+  color: #F4F3FC !important;
+}
+
+html.dark aside,
+html.dark .bg-surface-container-low {
+  background-color: #191926 !important;
+  border-right-color: #2D2D40 !important;
+}
+
+html.dark .bg-surface-container-lowest {
+  background-color: #1D1D2B !important;
+  border-color: #36364A !important;
+}
+
+html.dark .bg-surface-container {
+  background-color: #242436 !important;
+}
+
+html.dark .bg-surface-container-high {
+  background-color: #2C2C40 !important;
+}
+
+html.dark .bg-surface-container-highest {
+  background-color: #36364A !important;
+}
+
+html.dark .text-on-surface {
+  color: #F4F3FC !important;
+}
+
+html.dark .text-on-surface-variant {
+  color: #B1B0C4 !important;
+}
+
+html.dark header {
+  background-color: rgba(21, 21, 32, 0.88) !important;
+  border-bottom: 1px solid #2D2D40 !important;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25) !important;
+}
+
+html.dark input,
+html.dark textarea {
+  background-color: #1D1D2B !important;
+  color: #F4F3FC !important;
+  border-color: #36364A !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #73738A !important;
+}
+
+html.dark .bento-card {
+  background-color: #1D1D2B !important;
+  border: 1px solid #2D2D40 !important;
+}
+
+html.dark .bento-card:hover {
+  background-color: #242436 !important;
+}
+
+html.dark .ai-response-card,
+html.dark .bg-surface-container-lowest.rounded-2xl {
+  background-color: #1D1D2B !important;
+  border: 1px solid #2D2D40 !important;
+}
+
+html.dark .bg-secondary-container {
+  background-color: #2C2750 !important;
+  color: #A49BFF !important;
+}
+
+html.dark #sidebar-profile-popover {
+  background-color: #1D1D2B !important;
+  border-color: #36364A !important;
+  color: #F4F3FC !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Floating Profile Popover & Modal
+   -------------------------------------------------------------------------- */
+#sidebar-profile-popover {
+  position: fixed;
+  left: 16px;
+  bottom: 84px;
+  width: 236px;
+  background-color: #ffffff;
+  border: 1px solid #E6E4F0;
+  box-shadow: 0 12px 32px -4px rgba(21, 21, 32, 0.16);
+  border-radius: 14px;
+  padding: 6px;
+  z-index: 70;
+  display: none;
+  animation: profilePopoverFade 0.15s cubic-bezier(0, 0, 0.2, 1);
+}
+
+body.sidebar-collapsed #sidebar-profile-popover {
+  left: 12px;
+  bottom: 74px;
+  width: 220px;
+}
+
+@keyframes profilePopoverFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-popover-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: inherit;
+  transition: background-color 0.15s;
+  cursor: pointer;
+  text-align: left;
+  border: none;
+  background: transparent;
+}
+
+.profile-popover-item:hover {
+  background-color: rgba(99, 91, 219, 0.08);
+}
+
+html.dark .profile-popover-item:hover {
+  background-color: rgba(164, 155, 255, 0.12);
+}
+
+/* Profile Info Modal */
+#smartassist-profile-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 15, 24, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Active chat highlight in sidebar */
+.recent-chat-active {
+  background-color: #EEEAFE !important;
+  color: #4a40c1 !important;
+  font-weight: 600 !important;
+}
+
+html.dark .recent-chat-active {
+  background-color: #2C2750 !important;
+  color: #A49BFF !important;
+  font-weight: 600 !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Interface Density: Compact Mode
+   -------------------------------------------------------------------------- */
+html.density-compact aside nav a,
+body.density-compact aside nav a {
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.35rem !important;
+}
+
+html.density-compact #sidebar-recent-chats-list .group,
+body.density-compact #sidebar-recent-chats-list .group {
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+}
+
+html.density-compact .p-space-lg,
+body.density-compact .p-space-lg {
+  padding: 1.125rem !important;
+}
+
+html.density-compact .gap-space-lg,
+body.density-compact .gap-space-lg {
+  gap: 1rem !important;
+}
+
+html.density-compact .gap-space-xl,
+body.density-compact .gap-space-xl {
+  gap: 1.25rem !important;
+}
+
+html.density-compact .py-space-xl,
+body.density-compact .py-space-xl {
+  padding-top: 1.25rem !important;
+  padding-bottom: 1.25rem !important;
+}
+
+html.density-compact .mb-space-xl,
+body.density-compact .mb-space-xl {
+  margin-bottom: 1.25rem !important;
+}
+
+html.density-compact .user-message-wrapper .p-space-md,
+body.density-compact .user-message-wrapper .p-space-md {
+  padding: 0.625rem 0.875rem !important;
+}
+
+html.density-compact .ai-response-card .p-space-lg,
+body.density-compact .ai-response-card .p-space-lg {
+  padding: 0.875rem !important;
+}
+

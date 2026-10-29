@@ -1,0 +1,91 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 9 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1164 >>
+stream
+BT /F1 11 Tf 50 720 Td 14 TL
+/F1 14 Tf (Chapter 1: Process Management and CPU Scheduling) Tj /F1 11 Tf T*
+(CPU scheduling is the process by which the operating system decides which process in the ready queue gets the CPU for execution.) Tj T*
+(The primary objectives of CPU scheduling are:) Tj T*
+(1. Maximum CPU utilization: Keeping the processor active as much as possible.) Tj T*
+(2. High Throughput: Number of processes completed per unit time.) Tj T*
+(3. Minimum Turnaround Time: Interval from process submission to completion.) Tj T*
+(4. Minimum Waiting Time: Total time spent waiting in the ready queue.) Tj T*
+(5. Minimum Response Time: Time taken from submission to first response.) Tj T*
+() Tj T*
+(Round Robin \(RR\) Scheduling:) Tj T*
+(Round Robin is a preemptive scheduling algorithm where each process is assigned a fixed time slice called a time quantum \(typically 10 to 100 milliseconds\).) Tj T*
+(If the process does not complete within its time quantum, it is preempted and placed at the back of the ready queue.) Tj T*
+(Round Robin is particularly suited for time-sharing systems because it guarantees fairness and prevents starvation.) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 9 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 1090 >>
+stream
+BT /F1 11 Tf 50 720 Td 14 TL
+/F1 14 Tf (Chapter 2: Deadlock Handling and Banker's Algorithm) Tj /F1 11 Tf T*
+(A deadlock occurs when a set of processes are blocked because each process is holding a resource and waiting for another resource held by another process.) Tj T*
+(Four Coffman conditions must hold simultaneously for a deadlock to occur:) Tj T*
+(1. Mutual Exclusion: At least one resource must be held in a non-shareable mode.) Tj T*
+(2. Hold and Wait: A process must be holding at least one resource and waiting to acquire additional resources.) Tj T*
+(3. No Preemption: Resources cannot be forcibly taken from a process.) Tj T*
+(4. Circular Wait: A closed loop of processes exists where each process waits for a resource held by the next.) Tj T*
+() Tj T*
+(Banker's Algorithm:) Tj T*
+(Developed by Edsger Dijkstra, the Banker's algorithm is a deadlock avoidance algorithm.) Tj T*
+(It tests for safety by simulating resource allocation for maximum possible requests, and ensures the system remains in a safe state where a safe execution sequence exists for all processes.) Tj T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 9 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 1001 >>
+stream
+BT /F1 11 Tf 50 720 Td 14 TL
+/F1 14 Tf (Chapter 3: Memory Management and Virtual Paging) Tj /F1 11 Tf T*
+(Virtual memory is a storage allocation technique that provides an idealized abstraction of the storage resources that are actually available on a given machine.) Tj T*
+(Paging is a memory management scheme that eliminates the need for contiguous allocation of physical memory.) Tj T*
+(Physical memory is divided into fixed-size blocks called frames, and logical memory is divided into blocks of the same size called pages.) Tj T*
+(The Page Table maps logical addresses \(page numbers\) to physical addresses \(frame numbers\).) Tj T*
+() Tj T*
+(Translation Lookaside Buffer \(TLB\):) Tj T*
+(The TLB is a high-speed hardware cache used to reduce the time taken to access memory locations in page tables.) Tj T*
+(If a page number is found in the TLB \(TLB Hit\), the frame number is immediately available.) Tj T*
+(If not found \(TLB Miss\), the page table in main memory must be accessed.) Tj T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000253 00000 n 
+0000001469 00000 n 
+0000001595 00000 n 
+0000002737 00000 n 
+0000002863 00000 n 
+0000003916 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+3986
+%%EOF

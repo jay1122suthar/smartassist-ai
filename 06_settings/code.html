@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link href="../sidebar.css" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#635bdb", "secondary-container": "#e4e0f4", "tertiary-fixed": "#d9e3f0", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#131d26", "error": "#ba1a1a", "on-secondary-fixed-variant": "#464555", "on-tertiary-container": "#e7f1fe", "surface-container": "#efecff", "surface-tint": "#544bcb", "secondary-fixed-dim": "#c8c4d7", "on-tertiary-fixed-variant": "#3e4852", "on-secondary-container": "#646373", "surface-container-highest": "#e2e0fa", "inverse-on-surface": "#f2efff", "secondary-fixed": "#e4e0f4", "outline-variant": "#c8c4d6", "inverse-primary": "#c4c0ff", "primary": "#4a40c1", "background": "#fcf8ff", "on-primary-container": "#f2eeff", "on-secondary-fixed": "#1b1a28", "tertiary-fixed-dim": "#bdc7d4", "secondary": "#5e5d6d", "surface-container-low": "#f5f2ff", "on-error": "#ffffff", "on-primary-fixed": "#120068", "on-background": "#1a1a2c", "on-error-container": "#93000a", "on-surface": "#1a1a2c", "surface-container-high": "#e8e5ff", "surface-variant": "#e2e0fa", "surface-bright": "#fcf8ff", "surface": "#fcf8ff", "primary-fixed": "#e3dfff", "tertiary-container": "#646e79", "surface-dim": "#dad7f1", "outline": "#777585", "on-primary-fixed-variant": "#3b2fb3", "inverse-surface": "#2f2f42", "primary-fixed-dim": "#c4c0ff", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "on-surface-variant": "#474554", "tertiary": "#4c5660", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter-desktop": "1.5rem", "space-2xl": "3rem", "margin": "1rem", "margin-desktop": "2rem", "gutter": "1rem", "space-xl": "2rem", "space-md": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-lg": [ "Geist" ], "title-md": [ "Geist" ], "headline-lg-mobile": [ "Geist" ], "code-md": [ "JetBrains Mono" ], "code-sm": [ "JetBrains Mono" ], "headline-xl-mobile": [ "Geist" ], "headline-xl": [ "Geist" ], "label-md": [ "Inter" ], "body-lg": [ "Inter" ], "label-sm": [ "JetBrains Mono" ], "body-sm": [ "Inter" ], "body-md": [ "Inter" ] }, "fontSize": { "headline-lg": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "title-md": [ "1.125rem", { "lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "headline-lg-mobile": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "code-md": [ "0.875rem", { "lineHeight": "1.45rem", "fontWeight": "400" } ], "code-sm": [ "0.75rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "label-md": [ "0.8125rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "500" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "label-sm": [ "0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-sm": [ "0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" } ], "body-md": [ "0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" } ] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-hidden"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="SmartAssist AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1ULkDWHhUyiuszNbifO30_a2e5Di9i8gVUGCZfBAJd35ptLfr6cC2eDUqRW-O12LDhKZ5hkjWAk761vcBDsRDJq_kgjeTvKdjtaIA0B0UnuSkVAD5wAJTpXc3C770-o-8BVdSpOlSPaD1P4JPKZPzkzfissfoSqtJF0fXep9jVRWrTMRr9tp55_ITwUvOAtV4mnlpC70WvEO_p_a95qij1OBUNBDrVXwimEsORjivA6HmcT1Lk-oEzmZQ8"/><span class="font-title-md text-title-md text-on-surface">SmartAssist AI</span></div><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">keyboard_double_arrow_left</span></button></div><div class="px-space-md pt-space-xs pb-space-sm"><button class="w-full h-10 px-space-md rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-[0_1px_4px_rgba(99,91,219,0.25)] hover:bg-primary transition-all duration-200 active:scale-[0.98]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>New Chat</span></button></div><div class="px-space-md py-space-xs"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant">search</span><input class="w-full pl-9 pr-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container/30 transition-all" placeholder="Search chats..." type="text"/></div></div><div class="px-space-md pt-space-sm pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Navigation</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-secondary-container text-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="chat" href="#"><span class="material-symbols-outlined text-[20px]">chat_bubble</span><span>Chat</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="study-assistant" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Study Assistant</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="code-assistant" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span><span>Code Assistant</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="chat-with-pdf" href="#"><span class="material-symbols-outlined text-[20px]">picture_as_pdf</span><span>Chat with PDF</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-secondary-container text-primary font-semibold" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></a></nav><div class="px-space-md pt-space-md pb-space-xs flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Recent Chats</span><span class="font-code-sm text-code-sm text-on-surface-variant">4</span></div><div class="flex-1 overflow-y-auto px-space-sm flex flex-col gap-0.5"><div class="group flex items-center justify-between px-space-sm py-1.5 rounded-lg hover:bg-surface-container cursor-pointer transition-colors"><div class="flex items-center gap-space-xs min-w-0"><span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">history</span><span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface truncate">Operating Systems Revision</span></div><button class="opacity-0 group-hover:opacity-100 p-0.5 hover:bg-surface-container-high rounded text-on-surface-variant transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">more_vert</span></button></div><div class="group flex items-center justify-between px-space-sm py-1.5 rounded-lg hover:bg-surface-container cursor-pointer transition-colors"><div class="flex items-center gap-space-xs min-w-0"><span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">history</span><span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface truncate">Python Code Debugging</span></div><button class="opacity-0 group-hover:opacity-100 p-0.5 hover:bg-surface-container-high rounded text-on-surface-variant transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">more_vert</span></button></div><div class="group flex items-center justify-between px-space-sm py-1.5 rounded-lg hover:bg-surface-container cursor-pointer transition-colors"><div class="flex items-center gap-space-xs min-w-0"><span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">history</span><span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface truncate">Database Normalization</span></div><button class="opacity-0 group-hover:opacity-100 p-0.5 hover:bg-surface-container-high rounded text-on-surface-variant transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">more_vert</span></button></div><div class="group flex items-center justify-between px-space-sm py-1.5 rounded-lg hover:bg-surface-container cursor-pointer transition-colors"><div class="flex items-center gap-space-xs min-w-0"><span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">history</span><span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface truncate">Machine Learning Basics</span></div><button class="opacity-0 group-hover:opacity-100 p-0.5 hover:bg-surface-container-high rounded text-on-surface-variant transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">more_vert</span></button></div></div></div><div class="p-space-md bg-surface-container/50 flex flex-col gap-space-sm"><div class="flex items-center justify-between"><div class="flex items-center gap-1 p-0.5 rounded-full bg-surface-container-highest"><button class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest shadow-sm text-on-surface font-label-sm text-label-sm" type="button"><span class="material-symbols-outlined text-[14px]">light_mode</span><span>Light</span></button><button class="flex items-center gap-1 px-2 py-0.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button"><span class="material-symbols-outlined text-[14px]">dark_mode</span><span>Dark</span></button></div><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" title="Collapse sidebar" type="button"><span class="material-symbols-outlined text-[18px]">dock_to_left</span></button></div><div class="flex items-center gap-space-sm pt-space-xs" id="sidebar-profile-section" style="cursor: pointer;" title="Account Options"><div id="sidebarUserAvatarBadge" class="w-9 h-9 rounded-full bg-primary text-white font-semibold flex items-center justify-center shrink-0 tracking-wider shadow-sm select-none text-xs">--</div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-1.5"><span id="sidebarUserName" class="font-label-md text-label-md text-on-surface truncate">Loading...</span></div><span id="sidebarUserEmail" class="font-body-sm text-body-sm text-on-surface-variant truncate">Account</span></div></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><img alt="SmartAssist AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1ULkDWHhUyiuszNbifO30_a2e5Di9i8gVUGCZfBAJd35ptLfr6cC2eDUqRW-O12LDhKZ5hkjWAk761vcBDsRDJq_kgjeTvKdjtaIA0B0UnuSkVAD5wAJTpXc3C770-o-8BVdSpOlSPaD1P4JPKZPzkzfissfoSqtJF0fXep9jVRWrTMRr9tp55_ITwUvOAtV4mnlpC70WvEO_p_a95qij1OBUNBDrVXwimEsORjivA6HmcT1Lk-oEzmZQ8"/><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="text-on-surface-variant">Workspace</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-on-surface font-label-md text-label-md">Active Session</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container-low font-code-sm text-code-sm text-tertiary"><span class="material-symbols-outlined text-[14px]">bolt</span><span>45ms</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="w-2 h-2 rounded-full bg-primary-container absolute top-1.5 right-1.5"></span></button></div><div id="headerUserAvatarBadge" class="w-8 h-8 rounded-full bg-primary text-white font-semibold flex items-center justify-center text-xs ring-1 ring-outline-variant shadow-sm select-none">--</div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div id="settingsLoadingOverlay" class="fixed inset-0 z-50 bg-surface/90 backdrop-blur-sm flex flex-col items-center justify-center transition-opacity duration-300"><div class="flex flex-col items-center gap-3"><div class="w-10 h-10 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div><span class="font-label-md text-label-md text-on-surface font-medium">Authenticating &amp; Loading Profile...</span></div></div><div class="flex flex-col w-full">
+<div class="px-space-lg py-space-xl max-w-7xl mx-auto w-full">
+<!-- Top Action / Breadcrumb Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider">System Control</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-code-sm text-code-sm text-secondary">v2.4.0-build.891</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Settings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Manage your profile, preferences, AI models, and account data.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center gap-1.5 shadow-sm" id="syncStateBtn" type="button" title="Synchronize state with Supabase cloud and backend">
+<span class="material-symbols-outlined text-[18px]" id="syncStateIcon">cloud_sync</span>
+<span id="syncStateText">Sync State</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary transition-all flex items-center gap-1.5 shadow-sm active:scale-95" id="topSaveTrigger" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Apply Updates</span>
+</button>
+</div>
+</div>
+<!-- Main Settings Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start relative">
+<!-- Left Sub-Navigation Rail (Col 1-3) -->
+<aside class="lg:col-span-3 sticky top-20 flex flex-col gap-1 bg-surface-container-low p-2 rounded-2xl shadow-sm">
+<div class="px-3 py-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Preferences Index</span>
+</div>
+<nav class="flex flex-col gap-1" id="settingsNav" role="tablist" aria-label="Settings Sections">
+<a class="nav-tab active flex items-center justify-between px-3 py-2.5 rounded-xl font-label-md text-label-md transition-all bg-secondary-container text-primary font-semibold shadow-xs" data-section="general-profile" href="#general-profile" id="navTabGeneral" role="tab" aria-selected="true" tabindex="0">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span>General Profile</span>
+</div>
+<span class="nav-tab-indicator flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span></span>
+</a>
+<a class="nav-tab flex items-center justify-between px-3 py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-section="appearance" href="#appearance" id="navTabAppearance" role="tab" aria-selected="false" tabindex="0">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+<span>Appearance</span>
+</div>
+<span class="nav-tab-indicator flex items-center justify-center"><span class="font-code-sm text-code-sm opacity-60">UI</span></span>
+</a>
+<a class="nav-tab flex items-center justify-between px-3 py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-section="ai-preferences" href="#ai-preferences" id="navTabAi" role="tab" aria-selected="false" tabindex="0">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<span>AI Preferences</span>
+</div>
+<span class="nav-tab-indicator flex items-center justify-center"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">psychology</span></span>
+</a>
+<a class="nav-tab flex items-center justify-between px-3 py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-section="privacy-storage" href="#privacy-storage" id="navTabPrivacy" role="tab" aria-selected="false" tabindex="0">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px]">security</span>
+<span>Privacy &amp; Storage</span>
+</div>
+<span class="nav-tab-indicator flex items-center justify-center"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">lock</span></span>
+</a>
+</nav>
+<div class="mt-4 pt-3 border-t border-outline-variant/30 px-3 flex flex-col gap-2">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-code-sm text-code-sm">Auth Provider</span>
+<span class="font-code-sm text-code-sm text-primary font-medium">Supabase</span>
+</div>
+<div class="flex items-center gap-1.5 text-xs text-secondary">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span id="railAuthStatus">Session Connected</span>
+</div>
+</div>
+</aside>
+<!-- Right Content Panels (Col 4-12) -->
+<div class="lg:col-span-9 flex flex-col gap-space-xl pb-24">
+<!-- SECTION 1: General Profile -->
+<section class="scroll-mt-20 flex flex-col gap-space-md" id="general-profile" data-section="general-profile">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">General Profile</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase">Account Credentials</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<!-- Alert / Status Feedback Banner -->
+<div class="hidden p-3 rounded-xl font-body-sm text-body-sm flex items-center justify-between gap-2" id="profileAlert">
+  <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-[18px]" id="profileAlertIcon">info</span>
+    <span id="profileAlertText">Alert message</span>
+  </div>
+  <button class="text-on-surface-variant hover:text-on-surface text-xs" id="profileAlertClose" type="button">Dismiss</button>
+</div>
+<!-- Avatar Row -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<div class="flex items-center gap-space-md">
+<div class="relative group cursor-pointer" id="avatarClickTarget" title="Click to upload or change profile photo">
+<div class="w-20 h-20 rounded-2xl bg-primary text-white font-headline-lg text-2xl flex items-center justify-center shadow-sm overflow-hidden select-none" id="profileAvatarContainer">
+  <span id="profileAvatarInitials">--</span>
+  <img alt="User avatar" class="hidden w-full h-full object-cover" id="profileAvatarImg" src=""/>
+</div>
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] rounded-2xl opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all">
+<span class="material-symbols-outlined text-white text-[22px]">photo_camera</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface" id="profileDisplayName">Loading user...</h3>
+<span class="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-code-sm text-code-sm font-medium flex items-center gap-1" id="profileVerifiedBadge">
+  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+  <span>Authenticated User</span>
+</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="profileEmailSubtitle">Fetching account...</span>
+<span class="font-code-sm text-code-sm text-secondary mt-0.5 max-w-sm truncate" id="profileUidText">UID: Loading...</span>
+
+<!-- Profile Photo Actions Row -->
+<div class="flex flex-wrap items-center gap-2 mt-2.5">
+  <input type="file" id="profilePhotoFileInput" accept="image/jpeg,image/png,image/webp" class="hidden" />
+  <button type="button" id="uploadPhotoBtn" class="px-3 py-1.5 rounded-lg bg-surface-container text-primary hover:bg-secondary-container font-label-md text-label-md flex items-center gap-1.5 transition-colors shadow-xs">
+    <span class="material-symbols-outlined text-[16px]">upload</span>
+    <span>Upload Photo</span>
+  </button>
+  <button type="button" id="changePhotoBtn" class="hidden px-3 py-1.5 rounded-lg bg-surface-container text-primary hover:bg-secondary-container font-label-md text-label-md flex items-center gap-1.5 transition-colors shadow-xs">
+    <span class="material-symbols-outlined text-[16px]">sync</span>
+    <span>Change Photo</span>
+  </button>
+  <button type="button" id="removePhotoBtn" class="hidden px-2.5 py-1.5 rounded-lg border border-error/30 text-error hover:bg-error-container/20 font-label-md text-label-md flex items-center gap-1 transition-colors">
+    <span class="material-symbols-outlined text-[16px]">delete</span>
+    <span>Remove</span>
+  </button>
+  <span id="stagedPhotoNotice" class="hidden text-xs text-primary font-code-sm flex items-center gap-1.5 bg-primary-container/10 px-2.5 py-1 rounded-md">
+    <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+    <span id="stagedPhotoNoticeText">Previewing • Click Save Changes</span>
+  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-9 px-3 rounded-lg border border-error/30 text-error hover:bg-error-container/20 font-label-md text-label-md transition-colors flex items-center gap-1.5" id="settingsSignOutBtn" title="Sign out of Supabase Auth" type="button">
+<span class="material-symbols-outlined text-[16px]">logout</span>
+<span>Sign Out</span>
+</button>
+</div>
+</div>
+<!-- Form Fields Grid -->
+<form class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="profileForm" onsubmit="event.preventDefault();">
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="profileFullNameInput">
+<span>Full Legal Name</span>
+<span class="font-code-sm text-code-sm text-primary">read/write</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-secondary">person</span>
+<input class="w-full pl-9 pr-3 py-2 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container/40 outline-none transition-all" id="profileFullNameInput" placeholder="Enter your full name" type="text" value=""/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="profileEmailInput">
+<span>Registered Email Address</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-container text-primary font-code-sm text-[10px]" id="emailBadge">SUPABASE AUTH</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-secondary">mail</span>
+<input class="w-full pl-9 pr-28 py-2 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container/40 outline-none transition-all" id="profileEmailInput" placeholder="name@domain.edu" type="email" value=""/>
+<button class="absolute right-1.5 px-3 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high text-xs font-label-md transition-colors flex items-center gap-1" id="updateEmailBtn" title="Send email change confirmation" type="button">
+<span class="material-symbols-outlined text-[14px]">send</span>
+<span>Update Email</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Updating your registered email triggers an official verification link sent to the new address through Supabase Auth.</p>
+</div>
+<div class="md:col-span-2 pt-2 flex items-center justify-end gap-space-sm">
+<button class="h-9 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" id="profileDiscardBtn" type="button">Discard</button>
+<button class="h-9 px-5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md transition-all flex items-center gap-1.5 shadow-sm" id="profileSaveBtn" type="submit">
+<span class="material-symbols-outlined text-[18px]" id="profileSaveIcon">check</span>
+<span id="profileSaveText">Save Changes</span>
+</button>
+</div>
+</form>
+</div>
+</section>
+<!-- SECTION 2: Appearance -->
+<section class="scroll-mt-20 flex flex-col gap-space-md" id="appearance" data-section="appearance">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Appearance &amp; Canvas</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase">Visual Theme</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<!-- Theme Card Selector -->
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-title-md text-title-md text-on-surface">Interface Theme</span>
+<span class="font-code-sm text-code-sm text-primary font-medium" id="themeActiveStatusText">Active: Light Studio</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md" id="themePicker">
+<!-- Option 1: Light (Selected) -->
+<div class="theme-card active cursor-pointer rounded-xl p-3 bg-surface-container-low transition-all relative flex flex-col gap-2.5 shadow-xs ring-2 ring-primary-container" id="themeCardLight" data-theme="light">
+<div class="h-24 rounded-lg bg-surface p-2 flex flex-col justify-between shadow-inner">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<div class="w-12 h-1.5 bg-surface-container-high rounded-full"></div>
+</div>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<div class="space-y-1.5">
+<div class="w-full h-2 bg-secondary-container rounded-sm"></div>
+<div class="w-2/3 h-2 bg-surface-container-highest rounded-sm"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">light_mode</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Light</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary checkmark" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Clean white and lavender studio palette.</span>
+</div>
+<!-- Option 2: Dark -->
+<div class="theme-card cursor-pointer rounded-xl p-3 bg-surface-container-low transition-all relative flex flex-col gap-2.5 shadow-xs hover:bg-surface-container" id="themeCardDark" data-theme="dark">
+<div class="h-24 rounded-lg bg-[#151520] p-2 flex flex-col justify-between shadow-inner">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#635BDB]"></span>
+<div class="w-12 h-1.5 bg-[#262638] rounded-full"></div>
+</div>
+<span class="w-2 h-2 rounded-full bg-[#36364A]"></span>
+</div>
+<div class="space-y-1.5">
+<div class="w-full h-2 bg-[#262638] rounded-sm"></div>
+<div class="w-2/3 h-2 bg-[#1D1D2B] rounded-sm"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">dark_mode</span>
+<span class="font-label-md text-label-md text-on-surface">Dark</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline checkmark hidden">circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">High-contrast slate/navy for low-light code work.</span>
+</div>
+<!-- Option 3: System Default -->
+<div class="theme-card cursor-pointer rounded-xl p-3 bg-surface-container-low transition-all relative flex flex-col gap-2.5 shadow-xs hover:bg-surface-container" id="themeCardSystem" data-theme="system">
+<div class="h-24 rounded-lg bg-gradient-to-tr from-[#151520] via-surface-container to-surface p-2 flex flex-col justify-between shadow-inner">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<div class="w-12 h-1.5 bg-outline-variant/60 rounded-full"></div>
+</div>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<div class="space-y-1.5">
+<div class="w-full h-2 bg-surface-container-highest/80 rounded-sm"></div>
+<div class="w-2/3 h-2 bg-surface-dim/80 rounded-sm"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">devices</span>
+<span class="font-label-md text-label-md text-on-surface">System Default</span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline checkmark hidden">circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Follows OS dark mode switching schedule.</span>
+</div>
+</div>
+</div>
+<!-- Interface Density -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pt-2 border-t border-outline-variant/30">
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Interface Density</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Adjust vertical padding of lists, prompt history, and code inspection drawers.</p>
+</div>
+<div class="inline-flex p-1 rounded-xl bg-surface-container-low" id="densitySelector">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-xs transition-all flex items-center gap-1.5 font-semibold" id="densityComfortableBtn" data-density="comfortable" type="button">
+<span class="material-symbols-outlined text-[16px]">view_agenda</span>
+<span>Comfortable</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5" id="densityCompactBtn" data-density="compact" type="button">
+<span class="material-symbols-outlined text-[16px]">density_medium</span>
+<span>Compact</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: AI Preferences -->
+<section class="scroll-mt-20 flex flex-col gap-space-md" id="ai-preferences" data-section="ai-preferences">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">AI &amp; Reasoning Preferences</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase">Engine Tuning</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<!-- Model Selector Dropdown -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-title-md text-title-md text-on-surface flex items-center gap-2" for="aiModelSelect">
+<span>Default Foundation Model</span>
+<span class="material-symbols-outlined text-[18px] text-secondary" title="The primary LLM driving code generation, PDF understanding, and synthesis">help_outline</span>
+</label>
+<span class="font-code-sm text-code-sm text-secondary">Token Window: 1M Context</span>
+</div>
+<div class="relative">
+<select id="aiModelSelect" class="w-full appearance-none bg-surface-container-low text-on-surface font-body-md text-body-md pl-4 pr-10 py-3 rounded-xl focus:ring-2 focus:ring-primary-container/40 focus:bg-surface-container-lowest outline-none transition-all cursor-pointer">
+<option value="gemini-3.5-flash" selected>Google Gemini 3.5 Flash (Recommended - Active &amp; Fast ~45ms)</option>
+<option value="gemini-3.8-flash">Gemini 3.8 Flash (Latest Reasoning &amp; Multi-modal)</option>
+<option value="gemini-flash-latest">Gemini Flash Latest (Auto-updated production build)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3.5 top-3.5 pointer-events-none text-secondary">expand_more</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-secondary" id="modelStatusLatencyText">Status: Latency ~45ms, 99.98% healthy endpoint uptime</span>
+</div>
+</div>
+<!-- Response Style Segmented Control -->
+<div class="flex flex-col gap-2 pt-2 border-t border-outline-variant/30">
+<div class="flex items-center justify-between">
+<label class="font-title-md text-title-md text-on-surface">Response Depth &amp; Conciseness</label>
+<span class="font-code-sm text-code-sm text-primary" id="responseStyleStatusText">Balanced (Default)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Controls whether the assistant provides quick algorithmic summaries or step-by-step proofs.</p>
+<div class="grid grid-cols-3 gap-2 p-1 bg-surface-container-low rounded-xl" id="responseStyleSegment">
+<button class="py-2.5 px-3 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center" data-style="concise" type="button">
+  Concise
+</button>
+<button class="py-2.5 px-3 rounded-lg bg-surface-container-lowest text-primary font-semibold font-label-md text-label-md shadow-xs transition-all text-center" data-style="balanced" type="button">
+  Balanced (Selected)
+</button>
+<button class="py-2.5 px-3 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center" data-style="detailed" type="button">
+  Detailed
+</button>
+</div>
+</div>
+<!-- Grid: Language & Assistant Mode -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-2 border-t border-outline-variant/30">
+<!-- Language Dropdown -->
+<div class="flex flex-col gap-2">
+<label class="font-title-md text-title-md text-on-surface" for="aiLanguageSelect">Preferred Response Language</label>
+<div class="relative">
+<select id="aiLanguageSelect" class="w-full appearance-none bg-surface-container-low text-on-surface font-body-md text-body-md pl-4 pr-10 py-2.5 rounded-xl focus:ring-2 focus:ring-primary-container/40 focus:bg-surface-container-lowest outline-none transition-all cursor-pointer">
+<option value="en-US" selected>English (US) - Native Technical</option>
+<option value="en-GB">English (UK)</option>
+<option value="zh-CN">Chinese (Simplified) - 中文</option>
+<option value="es-ES">Spanish - Español</option>
+<option value="de-DE">German - Deutsch</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-secondary">expand_more</span>
+</div>
+</div>
+<!-- Default Assistant Mode -->
+<div class="flex flex-col gap-2">
+<label class="font-title-md text-title-md text-on-surface">Default Launch Intent</label>
+<div class="grid grid-cols-3 gap-1.5 p-1 bg-surface-container-low rounded-xl" id="intentSegment">
+<button class="py-2 px-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center" data-intent="general" type="button">
+  General
+</button>
+<button class="py-2 px-2 rounded-lg bg-surface-container-lowest text-primary font-semibold font-label-md text-label-md shadow-xs transition-all text-center" data-intent="study" type="button">
+  Study (Active)
+</button>
+<button class="py-2 px-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center" data-intent="code" type="button">
+  Code
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Conversation & Privacy -->
+<section class="scroll-mt-20 flex flex-col gap-space-md" id="privacy-storage" data-section="privacy-storage">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Conversation &amp; Privacy Safeguards</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase">Retention Policies</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<!-- Toggle History -->
+<div class="flex items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Save conversation history</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Store chats, attached lecture slides, and execution traces in your university cloud locker.</span>
+</div>
+<!-- Switch control -->
+<label class="relative inline-flex items-center cursor-pointer select-none">
+<input checked="" class="sr-only peer" id="historyToggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+
+<!-- Real Cloud Locker & Storage Usage Card -->
+<div class="rounded-xl p-space-md bg-surface-container-low border border-outline-variant/30 flex flex-col gap-3">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary text-[20px]">cloud_done</span>
+      <span class="font-title-md text-title-md text-on-surface font-semibold">Cloud Locker &amp; Storage Usage</span>
+    </div>
+    <button type="button" id="refreshStorageBtn" class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high text-xs font-label-md flex items-center gap-1 transition-colors" title="Reload live storage stats">
+      <span class="material-symbols-outlined text-[14px]">refresh</span>
+      <span>Refresh Stats</span>
+    </button>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+    <div class="p-3 rounded-lg bg-surface-container-lowest flex flex-col gap-0.5 shadow-xs">
+      <span class="text-xs text-on-surface-variant font-medium">Uploaded Documents</span>
+      <span class="font-headline-lg text-lg text-on-surface font-semibold" id="storageDocCount">Loading...</span>
+      <span class="font-code-sm text-code-sm text-secondary" id="storageDocSize">Calculating...</span>
+    </div>
+    <div class="p-3 rounded-lg bg-surface-container-lowest flex flex-col gap-0.5 shadow-xs">
+      <span class="text-xs text-on-surface-variant font-medium">Active Conversations</span>
+      <span class="font-headline-lg text-lg text-on-surface font-semibold" id="storageConvCount">Loading...</span>
+      <span class="font-code-sm text-code-sm text-secondary" id="storageConvSubtitle">Local &amp; cloud synced</span>
+    </div>
+    <div class="p-3 rounded-lg bg-surface-container-lowest flex flex-col gap-0.5 shadow-xs">
+      <span class="text-xs text-on-surface-variant font-medium">Locker Status</span>
+      <span class="font-headline-lg text-lg text-emerald-600 font-semibold flex items-center gap-1">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span id="storageLockerStatus">Connected</span>
+      </span>
+      <span class="font-code-sm text-code-sm text-secondary">FERPA compliant</span>
+    </div>
+  </div>
+</div>
+
+<!-- Single action row: clear current -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pt-3 border-t border-outline-variant/30">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Clear active conversation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Empties the current session thread while retaining older archival threads.</span>
+</div>
+<button class="h-9 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5 shrink-0" id="clearCurrentChatBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">cleaning_services</span>
+<span>Clear Current</span>
+</button>
+</div>
+<!-- Destructive Action Card (Danger Zone) -->
+<div class="rounded-xl p-space-md bg-error-container/30 flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-error font-semibold">Clear All Conversations</h3>
+<span class="px-2 py-0.2 rounded-full bg-error text-on-error font-code-sm text-[10px] uppercase font-bold tracking-wider">Irreversible</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="clearAllHistoryDesc">Permanently wipes all recent chat sessions, cached lecture notes, and stored documents.</p>
+</div>
+</div>
+<button class="h-9 px-4 rounded-lg bg-error text-on-error hover:bg-[#990f0f] font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 shrink-0 shadow-sm active:scale-95" id="triggerDeleteModal" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Clear All History</span>
+</button>
+</div>
+<!-- Privacy Note / Educational compliance banner -->
+<div class="flex items-start gap-3 p-space-md rounded-xl bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Student Data Privacy Guarantee</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Your prompts and uploaded documents are processed securely and not used to train public models. Academic queries adhere strictly to FERPA data isolation standards.
+                </p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- Confirmation Modal (Preview state toggleable) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm hidden transition-opacity duration-200" id="deleteModal">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-2xl p-space-lg shadow-xl flex flex-col gap-space-md transform transition-all">
+<div class="w-12 h-12 rounded-xl bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">delete_sweep</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Purge all session records?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1" id="deleteModalDesc">This will permanently erase all stored conversations, parsed PDFs, and local model parameters. This operation cannot be undone.</p>
+</div>
+<div class="bg-surface-container-low p-3 rounded-xl font-code-sm text-code-sm text-secondary flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span id="deleteModalItemCount">4 active conversations and stored documents will be detached.</span>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-2">
+<button class="h-10 px-4 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors" id="closeModalBtn" type="button">
+          Cancel
+        </button>
+<button class="h-10 px-4 rounded-lg bg-error text-on-error hover:bg-[#990f0f] font-label-md text-label-md transition-all flex items-center gap-1.5 shadow-sm" id="confirmDeleteBtn" type="button">
+<span>Confirm Purge</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Primary Sticky Action Bar -->
+<div class="sticky bottom-0 left-0 right-0 z-30 bg-surface/90 backdrop-blur-md border-t border-outline-variant/30 py-3 px-space-lg shadow-lg">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-2 text-on-surface-variant min-w-0">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">check_circle</span>
+<span class="font-body-sm text-body-sm truncate" id="footerStagingNotice">All modifications staged. Click Apply Updates or Save All Preferences.</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="h-10 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" id="resetDefaultsBtn" type="button">
+          Reset Defaults
+        </button>
+<button class="h-10 px-6 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md transition-all flex items-center gap-2 shadow-md hover:shadow-lg active:scale-98" id="saveAllBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save All Preferences</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script src="/node_modules/@supabase/supabase-js/dist/umd/supabase.js"></script>
+<script src="../supabase-client.js"></script>
+<script src="../shared-nav.js"></script>
+<script src="../sidebar.js"></script>
+<script>
+  (function () {
+    'use strict';
+
+    // -------------------------------------------------------------------------
+    // 1. DOM Elements
+    // -------------------------------------------------------------------------
+    const loadingOverlay = document.getElementById('settingsLoadingOverlay');
+    const profileForm = document.getElementById('profileForm');
+    const fullNameInput = document.getElementById('profileFullNameInput');
+    const emailInput = document.getElementById('profileEmailInput');
+    const updateEmailBtn = document.getElementById('updateEmailBtn');
+    const saveBtn = document.getElementById('profileSaveBtn');
+    const discardBtn = document.getElementById('profileDiscardBtn');
+    const saveAllBtn = document.getElementById('saveAllBtn');
+    const topSaveTrigger = document.getElementById('topSaveTrigger');
+    const syncStateBtn = document.getElementById('syncStateBtn');
+    const syncStateIcon = document.getElementById('syncStateIcon');
+    const syncStateText = document.getElementById('syncStateText');
+    const resetDefaultsBtn = document.getElementById('resetDefaultsBtn');
+    const signOutBtn = document.getElementById('settingsSignOutBtn');
+
+    const displayName = document.getElementById('profileDisplayName');
+    const emailSubtitle = document.getElementById('profileEmailSubtitle');
+    const uidText = document.getElementById('profileUidText');
+    const avatarContainer = document.getElementById('profileAvatarContainer');
+    const avatarInitials = document.getElementById('profileAvatarInitials');
+    const avatarImg = document.getElementById('profileAvatarImg');
+    const alertBox = document.getElementById('profileAlert');
+    const alertIcon = document.getElementById('profileAlertIcon');
+    const alertText = document.getElementById('profileAlertText');
+    const alertClose = document.getElementById('profileAlertClose');
+
+    const sidebarAvatarBadge = document.getElementById('sidebarUserAvatarBadge');
+    const sidebarUserName = document.getElementById('sidebarUserName');
+    const sidebarUserEmail = document.getElementById('sidebarUserEmail');
+    const headerAvatarBadge = document.getElementById('headerUserAvatarBadge');
+    const railAuthStatus = document.getElementById('railAuthStatus');
+
+    // Profile photo controls
+    const avatarClickTarget = document.getElementById('avatarClickTarget');
+    const profilePhotoFileInput = document.getElementById('profilePhotoFileInput');
+    const uploadPhotoBtn = document.getElementById('uploadPhotoBtn');
+    const changePhotoBtn = document.getElementById('changePhotoBtn');
+    const removePhotoBtn = document.getElementById('removePhotoBtn');
+    const stagedPhotoNotice = document.getElementById('stagedPhotoNotice');
+    const stagedPhotoNoticeText = document.getElementById('stagedPhotoNoticeText');
+
+    // Navigation Tabs & Sections
+    const navTabs = document.querySelectorAll('#settingsNav .nav-tab');
+    const sections = {
+      'general-profile': document.getElementById('general-profile'),
+      'appearance': document.getElementById('appearance'),
+      'ai-preferences': document.getElementById('ai-preferences'),
+      'privacy-storage': document.getElementById('privacy-storage')
+    };
+
+    // Appearance Elements
+    const themeCards = document.querySelectorAll('.theme-card');
+    const themeActiveStatusText = document.getElementById('themeActiveStatusText');
+    const densityComfortableBtn = document.getElementById('densityComfortableBtn');
+    const densityCompactBtn = document.getElementById('densityCompactBtn');
+
+    // AI Preferences Elements
+    const aiModelSelect = document.getElementById('aiModelSelect');
+    const modelStatusLatencyText = document.getElementById('modelStatusLatencyText');
+    const responseStyleButtons = document.querySelectorAll('#responseStyleSegment button[data-style]');
+    const responseStyleStatusText = document.getElementById('responseStyleStatusText');
+    const aiLanguageSelect = document.getElementById('aiLanguageSelect');
+    const intentButtons = document.querySelectorAll('#intentSegment button[data-intent]');
+
+    // Privacy & Storage Elements
+    const historyToggle = document.getElementById('historyToggle');
+    const storageDocCount = document.getElementById('storageDocCount');
+    const storageDocSize = document.getElementById('storageDocSize');
+    const storageConvCount = document.getElementById('storageConvCount');
+    const refreshStorageBtn = document.getElementById('refreshStorageBtn');
+    const clearCurrentChatBtn = document.getElementById('clearCurrentChatBtn');
+    const deleteModal = document.getElementById('deleteModal');
+    const triggerDeleteModal = document.getElementById('triggerDeleteModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+    const deleteModalItemCount = document.getElementById('deleteModalItemCount');
+
+    // -------------------------------------------------------------------------
+    // 2. Application & Preference State
+    // -------------------------------------------------------------------------
+    let currentProfile = null;
+    let isSaving = false;
+    let isSyncing = false;
+    let stagedPhotoFile = null;
+    let stagedObjectUrl = null;
+    let photoMarkedForRemoval = false;
+
+    // Default Preferences
+    let currentTheme = localStorage.getItem('smartassist_theme') || 'light';
+    let currentDensity = localStorage.getItem('smartassist_density') || 'comfortable';
+    let currentModel = 'gemini-3.5-flash';
+    let currentResponseStyle = 'balanced';
+    let currentLanguage = 'en-US';
+    let currentIntent = 'study';
+    let currentSaveHistory = true;
+
+    // Tab default inactive indicators
+    const defaultTabIndicators = {
+      'general-profile': '<span class="material-symbols-outlined text-[16px] text-on-surface-variant">person</span>',
+      'appearance': '<span class="font-code-sm text-code-sm opacity-60">UI</span>',
+      'ai-preferences': '<span class="material-symbols-outlined text-[16px] text-on-surface-variant">psychology</span>',
+      'privacy-storage': '<span class="material-symbols-outlined text-[16px] text-on-surface-variant">lock</span>'
+    };
+
+    // -------------------------------------------------------------------------
+    // 3. Section Navigation & Active Highlighting
+    // -------------------------------------------------------------------------
+    function normalizeSectionHash(hash) {
+      const clean = (hash || '').replace(/^#/, '').toLowerCase().trim();
+      if (clean === 'general' || clean === 'profile' || clean === 'general-profile') return 'general-profile';
+      if (clean === 'appearance' || clean === 'theme') return 'appearance';
+      if (clean === 'ai' || clean === 'ai-preferences' || clean === 'models') return 'ai-preferences';
+      if (clean === 'privacy' || clean === 'storage' || clean === 'privacy-storage' || clean === 'conversation-privacy') return 'privacy-storage';
+      return 'general-profile';
+    }
+
+    function switchSection(sectionId, updateHash = true) {
+      const targetId = normalizeSectionHash(sectionId);
+
+      // 1. Toggle visibility of content sections
+      Object.entries(sections).forEach(([id, sectionEl]) => {
+        if (!sectionEl) return;
+        if (id === targetId) {
+          sectionEl.classList.remove('hidden');
+        } else {
+          sectionEl.classList.add('hidden');
+        }
+      });
+
+      // 2. Update navigation tab active styles
+      navTabs.forEach(tab => {
+        const tabSection = normalizeSectionHash(tab.getAttribute('data-section') || tab.getAttribute('href'));
+        const indicator = tab.querySelector('.nav-tab-indicator');
+
+        if (tabSection === targetId) {
+          // Active state: lavender bg (#e4e0f4), purple text (#4a40c1), font-semibold, active indicator
+          tab.classList.add('active', 'bg-secondary-container', 'text-primary', 'font-semibold', 'shadow-xs');
+          tab.classList.remove('text-on-surface-variant');
+          tab.setAttribute('aria-selected', 'true');
+          if (indicator) {
+            indicator.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>';
+          }
+        } else {
+          // Inactive state: neutral variant text, hover states
+          tab.classList.remove('active', 'bg-secondary-container', 'text-primary', 'font-semibold', 'shadow-xs');
+          tab.classList.add('text-on-surface-variant');
+          tab.setAttribute('aria-selected', 'false');
+          if (indicator && defaultTabIndicators[tabSection]) {
+            indicator.innerHTML = defaultTabIndicators[tabSection];
+          }
+        }
+      });
+
+      // 3. Update URL hash without jarring jump
+      if (updateHash) {
+        if (window.location.hash !== '#' + targetId) {
+          history.pushState(null, '', '#' + targetId);
+        }
+      }
+    }
+
+    // Bind tab clicks and keyboard events
+    navTabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = tab.getAttribute('data-section') || tab.getAttribute('href');
+        switchSection(target, true);
+      });
+
+      tab.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const target = tab.getAttribute('data-section') || tab.getAttribute('href');
+          switchSection(target, true);
+        }
+      });
+    });
+
+    // Listen for browser Back, Forward, and direct URL changes
+    window.addEventListener('popstate', () => {
+      switchSection(window.location.hash, false);
+    });
+    window.addEventListener('hashchange', () => {
+      switchSection(window.location.hash, false);
+    });
+
+    // -------------------------------------------------------------------------
+    // 4. Alert & Feedback Banner Helper
+    // -------------------------------------------------------------------------
+    function showAlert(type, message) {
+      if (!alertBox) return;
+      alertBox.classList.remove('hidden', 'bg-emerald-100', 'text-emerald-800', 'dark:bg-emerald-950', 'dark:text-emerald-200', 'bg-error-container', 'text-error', 'bg-secondary-container', 'text-on-secondary-container');
+      
+      if (type === 'success') {
+        alertBox.classList.add('bg-emerald-100', 'text-emerald-800', 'dark:bg-emerald-950', 'dark:text-emerald-200');
+        if (alertIcon) alertIcon.textContent = 'check_circle';
+      } else if (type === 'error') {
+        alertBox.classList.add('bg-error-container', 'text-error');
+        if (alertIcon) alertIcon.textContent = 'error';
+      } else {
+        alertBox.classList.add('bg-secondary-container', 'text-on-secondary-container');
+        if (alertIcon) alertIcon.textContent = 'info';
+      }
+
+      if (alertText) alertText.textContent = message;
+      alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    if (alertClose) {
+      alertClose.addEventListener('click', () => {
+        alertBox?.classList.add('hidden');
+      });
+    }
+
+    // -------------------------------------------------------------------------
+    // 5. Appearance Settings (Theme & Density)
+    // -------------------------------------------------------------------------
+    function selectTheme(theme, applyNow = true) {
+      currentTheme = theme || 'light';
+
+      themeCards.forEach(card => {
+        const cardTheme = card.getAttribute('data-theme');
+        const check = card.querySelector('.checkmark');
+
+        if (cardTheme === currentTheme) {
+          card.classList.add('active', 'ring-2', 'ring-primary-container');
+          if (check) {
+            check.classList.remove('hidden', 'text-outline');
+            check.textContent = 'check_circle';
+            check.classList.add('text-primary');
+          }
+        } else {
+          card.classList.remove('active', 'ring-2', 'ring-primary-container');
+          if (check) {
+            check.classList.add('hidden');
+            check.textContent = 'circle';
+            check.classList.remove('text-primary');
+            check.classList.add('text-outline');
+          }
+        }
+      });
+
+      if (themeActiveStatusText) {
+        if (currentTheme === 'dark') {
+          themeActiveStatusText.textContent = 'Active: Dark Studio';
+        } else if (currentTheme === 'system') {
+          themeActiveStatusText.textContent = 'Active: System OS Default';
+        } else {
+          themeActiveStatusText.textContent = 'Active: Light Studio';
+        }
+      }
+
+      if (applyNow) {
+        if (window.SmartAssistUI?.applyTheme) {
+          window.SmartAssistUI.applyTheme(currentTheme, true);
+        } else if (window.applyTheme) {
+          window.applyTheme(currentTheme, true);
+        } else {
+          localStorage.setItem('smartassist_theme', currentTheme);
+          if (currentTheme === 'dark' || (currentTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        }
+      }
+    }
+
+    themeCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const theme = card.getAttribute('data-theme');
+        selectTheme(theme, true);
+      });
+    });
+
+    function selectDensity(density, applyNow = true) {
+      currentDensity = density === 'compact' ? 'compact' : 'comfortable';
+
+      if (densityComfortableBtn && densityCompactBtn) {
+        if (currentDensity === 'compact') {
+          densityCompactBtn.className = 'px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-xs transition-all flex items-center gap-1.5 font-semibold';
+          densityComfortableBtn.className = 'px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5';
+        } else {
+          densityComfortableBtn.className = 'px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-xs transition-all flex items-center gap-1.5 font-semibold';
+          densityCompactBtn.className = 'px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5';
+        }
+      }
+
+      if (applyNow) {
+        if (window.SmartAssistUI?.applyDensity) {
+          window.SmartAssistUI.applyDensity(currentDensity, true);
+        } else if (window.applyDensity) {
+          window.applyDensity(currentDensity, true);
+        } else {
+          localStorage.setItem('smartassist_density', currentDensity);
+          if (currentDensity === 'compact') {
+            document.documentElement.classList.add('density-compact');
+          } else {
+            document.documentElement.classList.remove('density-compact');
+          }
+        }
+      }
+    }
+
+    densityComfortableBtn?.addEventListener('click', () => selectDensity('comfortable', true));
+    densityCompactBtn?.addEventListener('click', () => selectDensity('compact', true));
+
+    // -------------------------------------------------------------------------
+    // 6. AI Preferences (Model, Style, Language, Intent)
+    // -------------------------------------------------------------------------
+    const MODEL_LATENCIES = {
+      'gemini-3.5-flash': 'Status: Latency ~45ms, 99.98% healthy endpoint uptime (Fast & Recommended)',
+      'gemini-3.8-flash': 'Status: Latency ~120ms, Next-gen reasoning & multi-modal support',
+      'gemini-flash-latest': 'Status: Latency ~50ms, Continuous auto-updated production build'
+    };
+
+    function updateAiModelUI(model) {
+      currentModel = model || 'gemini-3.5-flash';
+      if (aiModelSelect) aiModelSelect.value = currentModel;
+      if (modelStatusLatencyText) {
+        modelStatusLatencyText.textContent = MODEL_LATENCIES[currentModel] || 'Status: Active and verified';
+      }
+
+      // Header model badge removed globally per UI requirements
+      const headerBadge = document.getElementById('headerModelBadge');
+      if (headerBadge) headerBadge.remove();
+    }
+
+    aiModelSelect?.addEventListener('change', (e) => {
+      updateAiModelUI(e.target.value);
+    });
+
+    function selectResponseStyle(style) {
+      currentResponseStyle = ['concise', 'balanced', 'detailed'].includes(style) ? style : 'balanced';
+
+      responseStyleButtons.forEach(btn => {
+        const btnStyle = btn.getAttribute('data-style');
+        if (btnStyle === currentResponseStyle) {
+          btn.className = 'py-2.5 px-3 rounded-lg bg-surface-container-lowest text-primary font-semibold font-label-md text-label-md shadow-xs transition-all text-center';
+          btn.textContent = btnStyle.charAt(0).toUpperCase() + btnStyle.slice(1) + ' (Selected)';
+        } else {
+          btn.className = 'py-2.5 px-3 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center';
+          btn.textContent = btnStyle.charAt(0).toUpperCase() + btnStyle.slice(1);
+        }
+      });
+
+      if (responseStyleStatusText) {
+        if (currentResponseStyle === 'concise') {
+          responseStyleStatusText.textContent = 'Concise (Brief & Direct)';
+        } else if (currentResponseStyle === 'detailed') {
+          responseStyleStatusText.textContent = 'Detailed (In-depth proofs & explanations)';
+        } else {
+          responseStyleStatusText.textContent = 'Balanced (Default)';
+        }
+      }
+    }
+
+    responseStyleButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectResponseStyle(btn.getAttribute('data-style'));
+      });
+    });
+
+    aiLanguageSelect?.addEventListener('change', (e) => {
+      currentLanguage = e.target.value || 'en-US';
+    });
+
+    function selectIntent(intent) {
+      currentIntent = ['general', 'study', 'code'].includes(intent) ? intent : 'study';
+
+      intentButtons.forEach(btn => {
+        const btnIntent = btn.getAttribute('data-intent');
+        if (btnIntent === currentIntent) {
+          btn.className = 'py-2 px-2 rounded-lg bg-surface-container-lowest text-primary font-semibold font-label-md text-label-md shadow-xs transition-all text-center';
+          btn.textContent = btnIntent.charAt(0).toUpperCase() + btnIntent.slice(1) + ' (Active)';
+        } else {
+          btn.className = 'py-2 px-2 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all text-center';
+          btn.textContent = btnIntent.charAt(0).toUpperCase() + btnIntent.slice(1);
+        }
+      });
+    }
+
+    intentButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectIntent(btn.getAttribute('data-intent'));
+      });
+    });
+
+    // -------------------------------------------------------------------------
+    // 7. Privacy & Storage Safeguards (Real Metrics & Actions)
+    // -------------------------------------------------------------------------
+    async function loadStorageMetrics() {
+      try {
+        if (storageDocCount) storageDocCount.textContent = 'Analyzing...';
+        if (storageDocSize) storageDocSize.textContent = 'Calculating...';
+        if (storageConvCount) storageConvCount.textContent = 'Counting...';
+
+        // 1. Fetch live document count from backend PDF service
+        let docCount = 0;
+        let totalBytes = 0;
+        try {
+          const res = await fetch('/api/pdf/documents');
+          if (res.ok) {
+            const data = await res.json();
+            const docs = data.documents || [];
+            docCount = docs.length;
+            totalBytes = docs.reduce((acc, d) => acc + (d.fileSize || 0), 0);
+          }
+        } catch (e) {
+          console.warn('[Settings] Failed to fetch PDF documents metric:', e);
+        }
+
+        // Format document size nicely
+        let formattedSize = '0 KB';
+        if (totalBytes > 1024 * 1024) {
+          formattedSize = (totalBytes / (1024 * 1024)).toFixed(1) + ' MB';
+        } else if (totalBytes > 0) {
+          formattedSize = (totalBytes / 1024).toFixed(1) + ' KB';
+        }
+
+        if (storageDocCount) storageDocCount.textContent = `${docCount} Document${docCount === 1 ? '' : 's'}`;
+        if (storageDocSize) storageDocSize.textContent = `${formattedSize} indexed in locker`;
+
+        // 2. Count active conversations from localStorage
+        let convCount = 0;
+        try {
+          const raw = localStorage.getItem('smartassist_conversations');
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            if (Array.isArray(parsed)) convCount = parsed.length;
+          }
+        } catch (e) {}
+
+        if (storageConvCount) storageConvCount.textContent = `${convCount} Session${convCount === 1 ? '' : 's'}`;
+        if (deleteModalItemCount) {
+          deleteModalItemCount.textContent = `${convCount} active conversation${convCount === 1 ? '' : 's'} and ${docCount} document${docCount === 1 ? '' : 's'} will be detached.`;
+        }
+      } catch (err) {
+        console.error('[Settings] Metrics calculation error:', err);
+      }
+    }
+
+    refreshStorageBtn?.addEventListener('click', async () => {
+      refreshStorageBtn.classList.add('opacity-50', 'pointer-events-none');
+      await loadStorageMetrics();
+      refreshStorageBtn.classList.remove('opacity-50', 'pointer-events-none');
+      showAlert('info', 'Storage metrics refreshed.');
+    });
+
+    historyToggle?.addEventListener('change', (e) => {
+      currentSaveHistory = e.target.checked;
+    });
+
+    // Clear Active Conversation Handler
+    clearCurrentChatBtn?.addEventListener('click', () => {
+      const confirmed = confirm('Are you sure you want to clear your active conversation thread? Archival chats will remain intact.');
+      if (!confirmed) return;
+
+      try {
+        const activeId = localStorage.getItem('smartassist_active_chat_id');
+        const raw = localStorage.getItem('smartassist_conversations');
+        if (raw && activeId) {
+          let list = JSON.parse(raw);
+          const idx = list.findIndex(c => c.id === activeId);
+          if (idx !== -1) {
+            list[idx].messages = [];
+            list[idx].timestamp = Date.now();
+            localStorage.setItem('smartassist_conversations', JSON.stringify(list));
+          }
+        }
+        localStorage.removeItem('smartassist_active_chat_messages');
+        showAlert('success', 'Active conversation thread cleared from local session.');
+        loadStorageMetrics();
+      } catch (err) {
+        showAlert('error', 'Could not clear active conversation: ' + err.message);
+      }
+    });
+
+    // Purge All History Modal
+    if (triggerDeleteModal && deleteModal) {
+      triggerDeleteModal.addEventListener('click', () => {
+        deleteModal.classList.remove('hidden');
+      });
+    }
+
+    if (closeModalBtn && deleteModal) {
+      closeModalBtn.addEventListener('click', () => {
+        deleteModal.classList.add('hidden');
+      });
+    }
+
+    if (confirmDeleteBtn && deleteModal) {
+      confirmDeleteBtn.addEventListener('click', async () => {
+        confirmDeleteBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Purging...</span>';
+        confirmDeleteBtn.setAttribute('disabled', 'true');
+
+        try {
+          // 1. Delete all user PDF documents and chunks from backend
+          const user = await window.SmartAssistAuth?.getUser();
+          const userId = user?.id || currentProfile?.id;
+          
+          await fetch('/api/pdf/documents/user/all', {
+            method: 'DELETE',
+            headers: {
+              'Content-Type': 'application/json',
+              'x-user-id': userId || ''
+            }
+          });
+
+          // 2. Wipe local conversation history
+          localStorage.removeItem('smartassist_conversations');
+          localStorage.removeItem('smartassist_active_chat_id');
+          localStorage.removeItem('smartassist_active_chat_messages');
+          localStorage.removeItem('smartassist_current_pdf');
+
+          await loadStorageMetrics();
+          showAlert('success', 'All conversation history and cloud indexed documents have been permanently purged.');
+        } catch (err) {
+          console.error('[Settings] Purge error:', err);
+          showAlert('error', 'Purge completed with notice: ' + (err.message || 'Check storage logs.'));
+        } finally {
+          deleteModal.classList.add('hidden');
+          confirmDeleteBtn.innerHTML = '<span>Confirm Purge</span>';
+          confirmDeleteBtn.removeAttribute('disabled');
+        }
+      });
+    }
+
+    // -------------------------------------------------------------------------
+    // 8. Profile Photo Upload, Preview, and Removal
+    // -------------------------------------------------------------------------
+    function updateAvatarButtonStates() {
+      if (stagedPhotoFile) {
+        uploadPhotoBtn?.classList.add('hidden');
+        changePhotoBtn?.classList.remove('hidden');
+        removePhotoBtn?.classList.remove('hidden');
+        stagedPhotoNotice?.classList.remove('hidden');
+        if (stagedPhotoNoticeText) stagedPhotoNoticeText.textContent = 'Previewing • Click Apply Updates to Save';
+      } else if (photoMarkedForRemoval) {
+        uploadPhotoBtn?.classList.remove('hidden');
+        changePhotoBtn?.classList.add('hidden');
+        removePhotoBtn?.classList.remove('hidden');
+        stagedPhotoNotice?.classList.remove('hidden');
+        if (stagedPhotoNoticeText) stagedPhotoNoticeText.textContent = 'Marked for Removal • Click Apply Updates to Save';
+      } else if (currentProfile?.avatarUrl) {
+        uploadPhotoBtn?.classList.add('hidden');
+        changePhotoBtn?.classList.remove('hidden');
+        removePhotoBtn?.classList.remove('hidden');
+        stagedPhotoNotice?.classList.add('hidden');
+      } else {
+        uploadPhotoBtn?.classList.remove('hidden');
+        changePhotoBtn?.classList.add('hidden');
+        removePhotoBtn?.classList.add('hidden');
+        stagedPhotoNotice?.classList.add('hidden');
+      }
+    }
+
+    [avatarClickTarget, uploadPhotoBtn, changePhotoBtn].forEach(el => {
+      el?.addEventListener('click', () => {
+        profilePhotoFileInput?.click();
+      });
+    });
+
+    profilePhotoFileInput?.addEventListener('change', (e) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+
+      const validTypes = ['image/jpeg', 'image/png', 'image/webp'];
+      const ext = (file.name || '').split('.').pop().toLowerCase();
+      const validExts = ['jpg', 'jpeg', 'png', 'webp'];
+
+      if (!validTypes.includes(file.type) && !validExts.includes(ext)) {
+        showAlert('error', 'Unsupported image format. Please select a JPEG, PNG, or WebP image.');
+        profilePhotoFileInput.value = '';
+        return;
+      }
+
+      const MAX_SIZE = 5 * 1024 * 1024;
+      if (file.size > MAX_SIZE) {
+        const mbSize = (file.size / (1024 * 1024)).toFixed(1);
+        showAlert('error', `Image exceeds 5 MB maximum size (${mbSize} MB selected). Please choose a smaller file.`);
+        profilePhotoFileInput.value = '';
+        return;
+      }
+
+      if (stagedObjectUrl) {
+        URL.revokeObjectURL(stagedObjectUrl);
+      }
+      stagedObjectUrl = URL.createObjectURL(file);
+      stagedPhotoFile = file;
+      photoMarkedForRemoval = false;
+
+      // Show instant preview in avatar container
+      if (avatarImg) {
+        avatarImg.src = stagedObjectUrl;
+        avatarImg.classList.remove('hidden');
+      }
+      if (avatarInitials) {
+        avatarInitials.classList.add('hidden');
+      }
+
+      updateAvatarButtonStates();
+      showAlert('info', `Previewing photo "${file.name}". Click "Apply Updates" or "Save Changes" to upload.`);
+    });
+
+    removePhotoBtn?.addEventListener('click', () => {
+      if (stagedPhotoFile) {
+        if (stagedObjectUrl) URL.revokeObjectURL(stagedObjectUrl);
+        stagedObjectUrl = null;
+        stagedPhotoFile = null;
+        if (profilePhotoFileInput) profilePhotoFileInput.value = '';
+        if (currentProfile?.avatarUrl) {
+          if (avatarImg) {
+            avatarImg.src = currentProfile.avatarUrl;
+            avatarImg.classList.remove('hidden');
+          }
+          if (avatarInitials) avatarInitials.classList.add('hidden');
+        } else {
+          if (avatarImg) avatarImg.classList.add('hidden');
+          if (avatarInitials) {
+            avatarInitials.textContent = currentProfile?.initials || '--';
+            avatarInitials.classList.remove('hidden');
+          }
+        }
+        updateAvatarButtonStates();
+        showAlert('info', 'Staged photo preview discarded.');
+        return;
+      }
+
+      if (currentProfile?.avatarUrl) {
+        photoMarkedForRemoval = true;
+        if (avatarImg) avatarImg.classList.add('hidden');
+        if (avatarInitials) {
+          avatarInitials.textContent = currentProfile?.initials || '--';
+          avatarInitials.classList.remove('hidden');
+        }
+        updateAvatarButtonStates();
+        showAlert('info', 'Profile photo marked for removal. Click "Apply Updates" or "Save Changes" to confirm.');
+      }
+    });
+
+    // -------------------------------------------------------------------------
+    // 9. Render User Profile & Preferences
+    // -------------------------------------------------------------------------
+    function renderProfile(profile) {
+      if (!profile) return;
+      currentProfile = profile;
+
+      if (fullNameInput) fullNameInput.value = profile.fullName;
+      if (emailInput) emailInput.value = profile.email;
+
+      if (displayName) displayName.textContent = profile.fullName;
+      if (emailSubtitle) emailSubtitle.textContent = profile.email;
+      if (uidText) uidText.textContent = `User ID: ${profile.id}`;
+
+      // Settings main avatar
+      if (!stagedPhotoFile && !photoMarkedForRemoval) {
+        if (profile.avatarUrl) {
+          if (avatarImg) {
+            avatarImg.src = profile.avatarUrl;
+            avatarImg.classList.remove('hidden');
+          }
+          if (avatarInitials) avatarInitials.classList.add('hidden');
+        } else {
+          if (avatarImg) avatarImg.classList.add('hidden');
+          if (avatarInitials) {
+            avatarInitials.textContent = profile.initials || '--';
+            avatarInitials.classList.remove('hidden');
+          }
+        }
+      }
+
+      updateAvatarButtonStates();
+
+      // Sidebar bottom profile
+      if (sidebarUserName) sidebarUserName.textContent = profile.fullName;
+      if (sidebarUserEmail) sidebarUserEmail.textContent = profile.email;
+      if (sidebarAvatarBadge) {
+        if (profile.avatarUrl) {
+          sidebarAvatarBadge.innerHTML = `<img src="${profile.avatarUrl}" class="w-full h-full object-cover rounded-full" alt="Profile" />`;
+        } else {
+          sidebarAvatarBadge.textContent = profile.initials || '--';
+        }
+      }
+
+      // Header avatar
+      if (headerAvatarBadge) {
+        if (profile.avatarUrl) {
+          headerAvatarBadge.innerHTML = `<img src="${profile.avatarUrl}" class="w-full h-full object-cover rounded-full" alt="Profile" />`;
+        } else {
+          headerAvatarBadge.textContent = profile.initials || '--';
+        }
+      }
+
+      if (railAuthStatus) {
+        railAuthStatus.textContent = 'Session Verified';
+      }
+
+      // Sync across all navigation popovers & modals
+      if (window.SmartAssistAuth?.syncAllAvatarsAndNames) {
+        window.SmartAssistAuth.syncAllAvatarsAndNames(profile);
+      }
+
+      // Populate preferences from profile metadata or localStorage
+      const userSettings = profile.settings || {};
+      const localSettings = JSON.parse(localStorage.getItem('smartassist_settings') || '{}');
+      const mergedSettings = { ...localSettings, ...userSettings };
+
+      const resolvedTheme = mergedSettings.theme || localStorage.getItem('smartassist_theme') || 'light';
+      selectTheme(resolvedTheme, true);
+
+      const resolvedDensity = mergedSettings.density || localStorage.getItem('smartassist_density') || 'comfortable';
+      selectDensity(resolvedDensity, true);
+
+      const resolvedModel = mergedSettings.model || 'gemini-3.5-flash';
+      updateAiModelUI(resolvedModel);
+
+      const resolvedStyle = mergedSettings.responseStyle || 'balanced';
+      selectResponseStyle(resolvedStyle);
+
+      const resolvedLang = mergedSettings.language || 'en-US';
+      if (aiLanguageSelect) aiLanguageSelect.value = resolvedLang;
+      currentLanguage = resolvedLang;
+
+      const resolvedIntent = mergedSettings.intent || 'study';
+      selectIntent(resolvedIntent);
+
+      const resolvedSaveHistory = mergedSettings.saveHistory !== false;
+      if (historyToggle) historyToggle.checked = resolvedSaveHistory;
+      currentSaveHistory = resolvedSaveHistory;
+    }
+
+    // -------------------------------------------------------------------------
+    // 10. Load Settings & Auth Verification
+    // -------------------------------------------------------------------------
+    async function loadSettings() {
+      try {
+        if (loadingOverlay) loadingOverlay.classList.remove('hidden');
+
+        if (!window.SmartAssistAuth) {
+          throw new Error('SmartAssistAuth library not loaded.');
+        }
+
+        const client = await window.SmartAssistAuth.getClient();
+        const user = await window.SmartAssistAuth.getUser();
+
+        // Redirect unauthenticated visitors to Sign In
+        if (!user) {
+          console.warn('[Settings] Unauthenticated session. Redirecting to sign in...');
+          window.location.href = '../09_sign_in/code.html';
+          return;
+        }
+
+        const profile = await window.SmartAssistAuth.getProfile();
+        renderProfile(profile);
+
+        // Load storage stats
+        await loadStorageMetrics();
+
+        // Activate correct section from URL hash
+        const initialHash = window.location.hash || '#general-profile';
+        switchSection(initialHash, false);
+
+        // Listen for session auth state changes
+        if (client?.auth) {
+          client.auth.onAuthStateChange(async (event, session) => {
+            if (event === 'SIGNED_OUT' || !session) {
+              window.location.href = '../09_sign_in/code.html';
+            } else if (event === 'USER_UPDATED') {
+              const updated = await window.SmartAssistAuth.getProfile();
+              renderProfile(updated);
+            }
+          });
+        }
+
+      } catch (err) {
+        console.error('[Settings] Initialization error:', err);
+        showAlert('error', `Failed to load profile: ${err.message || 'Please sign in again.'}`);
+        setTimeout(() => {
+          window.location.href = '../09_sign_in/code.html';
+        }, 1500);
+      } finally {
+        if (loadingOverlay) {
+          loadingOverlay.classList.add('opacity-0');
+          setTimeout(() => {
+            loadingOverlay.classList.add('hidden');
+            loadingOverlay.classList.remove('opacity-0');
+          }, 300);
+        }
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 11. Save All Preferences & Updates
+    // -------------------------------------------------------------------------
+    async function handleSaveAll() {
+      if (isSaving) return;
+      const newName = (fullNameInput?.value || '').trim();
+
+      if (!newName || newName.length < 2) {
+        showAlert('error', 'Full name must contain at least 2 characters.');
+        switchSection('general-profile', true);
+        fullNameInput?.focus();
+        return;
+      }
+
+      isSaving = true;
+      const saveIcon = document.getElementById('profileSaveIcon');
+      const saveText = document.getElementById('profileSaveText');
+      if (saveIcon) {
+        saveIcon.textContent = 'sync';
+        saveIcon.classList.add('animate-spin');
+      }
+      if (saveText) saveText.textContent = stagedPhotoFile ? 'Uploading photo…' : 'Saving…';
+
+      [saveBtn, saveAllBtn, topSaveTrigger].forEach(b => {
+        b?.setAttribute('disabled', 'true');
+        b?.classList.add('opacity-75');
+      });
+
+      try {
+        // Step A: Handle photo upload or removal if changed
+        if (stagedPhotoFile) {
+          await window.SmartAssistAuth.uploadAvatar(stagedPhotoFile);
+          if (stagedObjectUrl) {
+            URL.revokeObjectURL(stagedObjectUrl);
+            stagedObjectUrl = null;
+          }
+          stagedPhotoFile = null;
+        } else if (photoMarkedForRemoval) {
+          await window.SmartAssistAuth.removeAvatar();
+          photoMarkedForRemoval = false;
+        }
+
+        // Step B: Build consolidated settings payload
+        const settingsPayload = {
+          theme: currentTheme,
+          density: currentDensity,
+          model: currentModel,
+          responseStyle: currentResponseStyle,
+          language: currentLanguage,
+          intent: currentIntent,
+          saveHistory: currentSaveHistory,
+          updatedAt: new Date().toISOString()
+        };
+
+        // Step C: Persist to Supabase Auth user_metadata, profiles table, and localStorage
+        await window.SmartAssistAuth.updateProfile({
+          fullName: newName,
+          settings: settingsPayload
+        });
+
+        // Apply theme and density globally
+        if (window.SmartAssistUI?.applyTheme) {
+          window.SmartAssistUI.applyTheme(currentTheme, true);
+        }
+        if (window.SmartAssistUI?.applyDensity) {
+          window.SmartAssistUI.applyDensity(currentDensity, true);
+        }
+
+        const refreshed = await window.SmartAssistAuth.getProfile();
+        renderProfile(refreshed);
+
+        showAlert('success', 'Preferences and profile updated successfully! Persisted securely to Supabase.');
+
+        // Toast feedback on all save buttons
+        [saveBtn, saveAllBtn, topSaveTrigger].forEach(btn => {
+          if (!btn) return;
+          const orig = btn.innerHTML;
+          btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>Saved!</span>';
+          setTimeout(() => {
+            btn.innerHTML = orig;
+            btn.removeAttribute('disabled');
+            btn.classList.remove('opacity-75');
+          }, 1500);
+        });
+
+      } catch (err) {
+        console.error('[Settings] Save error:', err);
+        showAlert('error', `Could not update preferences: ${err.message || 'Operation failed'}`);
+        [saveBtn, saveAllBtn, topSaveTrigger].forEach(b => {
+          b?.removeAttribute('disabled');
+          b?.classList.remove('opacity-75');
+        });
+      } finally {
+        if (saveIcon) {
+          saveIcon.textContent = 'check';
+          saveIcon.classList.remove('animate-spin');
+        }
+        if (saveText) saveText.textContent = 'Save Changes';
+        isSaving = false;
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 12. Sync State with Supabase Cloud
+    // -------------------------------------------------------------------------
+    async function handleSyncState() {
+      if (isSyncing) return;
+      isSyncing = true;
+
+      if (syncStateIcon) {
+        syncStateIcon.classList.add('animate-spin');
+      }
+      if (syncStateText) {
+        syncStateText.textContent = 'Syncing...';
+      }
+      if (syncStateBtn) {
+        syncStateBtn.setAttribute('disabled', 'true');
+      }
+
+      try {
+        const user = await window.SmartAssistAuth.getUser();
+        if (!user) {
+          throw new Error('No verified session found to synchronize.');
+        }
+
+        const refreshed = await window.SmartAssistAuth.getProfile();
+        renderProfile(refreshed);
+        await loadStorageMetrics();
+
+        showAlert('success', 'Settings and session synchronized with Supabase cloud.');
+      } catch (err) {
+        console.error('[Settings] Sync state error:', err);
+        showAlert('error', 'Sync failed: ' + (err.message || 'Please verify internet connection.'));
+      } finally {
+        if (syncStateIcon) {
+          syncStateIcon.classList.remove('animate-spin');
+        }
+        if (syncStateText) {
+          syncStateText.textContent = 'Sync State';
+        }
+        if (syncStateBtn) {
+          syncStateBtn.removeAttribute('disabled');
+        }
+        isSyncing = false;
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 13. Reset Defaults
+    // -------------------------------------------------------------------------
+    async function handleResetDefaults() {
+      const confirmed = confirm('Reset all appearance, AI, and privacy preferences to system defaults?');
+      if (!confirmed) return;
+
+      selectTheme('light', true);
+      selectDensity('comfortable', true);
+      updateAiModelUI('gemini-3.5-flash');
+      selectResponseStyle('balanced');
+      if (aiLanguageSelect) aiLanguageSelect.value = 'en-US';
+      currentLanguage = 'en-US';
+      selectIntent('study');
+      if (historyToggle) historyToggle.checked = true;
+      currentSaveHistory = true;
+
+      await handleSaveAll();
+      showAlert('info', 'All preferences reset to system defaults.');
+    }
+
+    // -------------------------------------------------------------------------
+    // 14. Update Email Address Flow
+    // -------------------------------------------------------------------------
+    async function handleUpdateEmail() {
+      const newEmail = (emailInput?.value || '').trim().toLowerCase();
+      if (!currentProfile) return;
+
+      if (!newEmail || newEmail === currentProfile.email.toLowerCase()) {
+        showAlert('info', 'Email address has not changed.');
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(newEmail)) {
+        showAlert('error', 'Please enter a valid email address.');
+        emailInput?.focus();
+        return;
+      }
+
+      if (updateEmailBtn) {
+        updateEmailBtn.setAttribute('disabled', 'true');
+        updateEmailBtn.innerHTML = '<span class="material-symbols-outlined text-[14px] animate-spin">sync</span><span>Sending...</span>';
+      }
+
+      try {
+        const res = await window.SmartAssistAuth.updateEmail(newEmail);
+        showAlert('success', res.message || `Confirmation email dispatched to ${newEmail}. Please verify before sign in.`);
+      } catch (err) {
+        showAlert('error', err.message || 'Failed to request email change.');
+      } finally {
+        if (updateEmailBtn) {
+          updateEmailBtn.removeAttribute('disabled');
+          updateEmailBtn.innerHTML = '<span class="material-symbols-outlined text-[14px]">send</span><span>Update Email</span>';
+        }
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 15. Discard Changes
+    // -------------------------------------------------------------------------
+    function handleDiscard() {
+      if (stagedObjectUrl) {
+        URL.revokeObjectURL(stagedObjectUrl);
+        stagedObjectUrl = null;
+      }
+      stagedPhotoFile = null;
+      photoMarkedForRemoval = false;
+      if (profilePhotoFileInput) profilePhotoFileInput.value = '';
+
+      if (currentProfile) {
+        renderProfile(currentProfile);
+        showAlert('info', 'Changes discarded. Restored saved profile and preferences.');
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 16. Sign Out
+    // -------------------------------------------------------------------------
+    async function handleSignOut() {
+      const conf = confirm('Are you sure you want to sign out of SmartAssist AI?');
+      if (conf) {
+        if (signOutBtn) {
+          signOutBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">sync</span><span>Signing Out...</span>';
+          signOutBtn.setAttribute('disabled', 'true');
+        }
+        await window.SmartAssistAuth.signOut();
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 17. Bind Action Listeners & Initial Load
+    // -------------------------------------------------------------------------
+    profileForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      handleSaveAll();
+    });
+
+    saveBtn?.addEventListener('click', handleSaveAll);
+    saveAllBtn?.addEventListener('click', handleSaveAll);
+    topSaveTrigger?.addEventListener('click', handleSaveAll);
+    syncStateBtn?.addEventListener('click', handleSyncState);
+    resetDefaultsBtn?.addEventListener('click', handleResetDefaults);
+    discardBtn?.addEventListener('click', handleDiscard);
+    updateEmailBtn?.addEventListener('click', handleUpdateEmail);
+    signOutBtn?.addEventListener('click', handleSignOut);
+
+    // Initial load
+    document.addEventListener('DOMContentLoaded', loadSettings);
+
+  })();
+</script>
+</main></div></body></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SmartAssist AI - Portal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link href="../sidebar.css" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#3b2fb3", "on-surface-variant": "#474554", "on-tertiary-fixed": "#131d26", "primary-fixed": "#e3dfff", "on-tertiary": "#ffffff", "primary": "#4a40c1", "tertiary-fixed-dim": "#bdc7d4", "tertiary-container": "#646e79", "on-secondary-fixed-variant": "#464555", "on-secondary-container": "#646373", "outline": "#777585", "on-tertiary-fixed-variant": "#3e4852", "secondary-fixed-dim": "#c8c4d7", "surface-container-high": "#e8e5ff", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#c4c0ff", "on-error-container": "#93000a", "secondary-container": "#e4e0f4", "inverse-primary": "#c4c0ff", "outline-variant": "#c8c4d6", "surface": "#fcf8ff", "primary-container": "#635bdb", "tertiary-fixed": "#d9e3f0", "on-tertiary-container": "#e7f1fe", "inverse-on-surface": "#f2efff", "error": "#ba1a1a", "surface-variant": "#e2e0fa", "secondary-fixed": "#e4e0f4", "on-secondary-fixed": "#1b1a28", "surface-tint": "#544bcb", "surface-bright": "#fcf8ff", "on-error": "#ffffff", "error-container": "#ffdad6", "surface-container": "#efecff", "tertiary": "#4c5660", "surface-container-highest": "#e2e0fa", "inverse-surface": "#2f2f42", "on-primary-fixed": "#120068", "secondary": "#5e5d6d", "surface-container-low": "#f5f2ff", "on-secondary": "#ffffff", "on-surface": "#1a1a2c", "background": "#fcf8ff", "on-background": "#1a1a2c", "surface-dim": "#dad7f1", "on-primary": "#ffffff", "on-primary-container": "#f2eeff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xl": "2rem", "space-2xl": "3rem", "margin": "1rem", "space-xs": "0.25rem", "space-md": "1rem", "space-lg": "1.5rem", "gutter-desktop": "1.5rem", "gutter": "1rem", "margin-desktop": "2rem" }, "fontFamily": { "label-md": ["Inter"], "headline-lg": ["Geist"], "headline-xl": ["Geist"], "body-sm": ["Inter"], "body-md": ["Inter"], "code-sm": ["JetBrains Mono"], "title-md": ["Geist"], "code-md": ["JetBrains Mono"], "body-lg": ["Inter"], "headline-xl-mobile": ["Geist"], "headline-lg-mobile": ["Geist"], "label-sm": ["JetBrains Mono"] }, "fontSize": { "label-md": ["0.8125rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }], "code-sm": ["0.75rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "title-md": ["1.125rem", { "lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "500" }], "code-md": ["0.875rem", { "lineHeight": "1.45rem", "fontWeight": "400" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "500" }] } } } };</script></head><body class="min-h-screen flex flex-col bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><a class="flex items-center gap-space-sm group" data-path="sign-in" href="#"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm group-hover:bg-primary transition-colors"><span class="material-symbols-outlined text-[20px]">auto_awesome</span></div><div class="flex flex-col"><span class="font-title-md text-title-md tracking-tight text-on-surface">SmartAssist AI</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Developer Portal</span></div></a><nav class="flex items-center gap-space-xs p-1 rounded-xl" data-active-classes="bg-surface-container-high text-on-surface font-medium"><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="sign-in" href="#">Sign In</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="create-account" href="#">Register</a><a aria-current="page" class="px-space-md py-1.5 rounded-lg transition-colors bg-surface-container-high text-on-surface font-medium" data-path="reset-password" href="#">Recovery</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span>API v2.4</span></div><a id="navProfileIconBtn" href="../09_sign_in/code.html" title="Sign In to Account" class="w-8 h-8 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center text-on-primary transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer select-none" aria-label="User Account"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></a></div></div></header><main class="flex-1 w-full pt-16 bg-surface flex flex-col justify-center"><div class="flex flex-col w-full py-space-xl px-4 sm:px-6 lg:px-8 items-center justify-center relative overflow-hidden">
+<!-- Subtle Atmospheric Radial Elements -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[680px] h-[420px] bg-gradient-to-b from-primary-fixed-dim/35 via-surface-container/20 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute -bottom-24 right-1/4 w-80 h-80 bg-surface-container-high/40 rounded-full blur-2xl pointer-events-none -z-10"></div>
+<!-- Central Recovery Bento Module -->
+<div class="w-full max-w-xl mx-auto flex flex-col items-center">
+<!-- Top Back Navigation Bar -->
+<div class="w-full flex items-center justify-between mb-space-md px-1">
+<a class="group inline-flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors" data-path="sign-in" href="#">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:-translate-x-0.5">arrow_back</span>
+<span class="font-label-md text-label-md">Back to Sign In</span>
+</a>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">verified_user</span>
+<span>ID Protection</span>
+</div>
+</div>
+<!-- Main Credential Recovery Card -->
+<div class="w-full bg-surface-container-lowest rounded-2xl shadow-xl shadow-surface-dim/30 overflow-hidden relative">
+<!-- Top Subtle Security Accent Rail -->
+<div class="h-1.5 w-full bg-gradient-to-r from-primary via-primary-container to-surface-variant"></div>
+<div class="p-6 sm:p-space-xl flex flex-col gap-space-lg">
+<!-- Header with Lock Badge & Typographic Hierarchy -->
+<div class="flex flex-col items-start gap-space-md">
+<div class="flex items-center justify-between w-full">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[26px]">lock_reset</span>
+</div>
+<div class="flex items-center gap-1.5 font-code-sm text-code-sm text-on-surface-variant bg-surface-container-low px-2.5 py-1 rounded-lg">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>AUTH-FLOW: RECOVER</span>
+</div>
+</div>
+<div class="space-y-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Reset your password</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+              Enter your academic or registered email address and we'll help you reset your password.
+            </p>
+</div>
+</div>
+<!-- Dynamic Error Notification Banner -->
+<div class="hidden p-space-md rounded-xl bg-error-container text-on-error-container flex items-start gap-3 transition-all duration-300" id="recovery-error-banner">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">error</span>
+<div class="flex-1">
+<p class="font-body-sm text-body-sm text-on-error-container font-medium leading-snug" id="recovery-error-text">
+  Please enter a valid email address.
+</p>
+</div>
+<button class="text-on-error-container/60 hover:text-on-error-container transition-colors cursor-pointer" id="close-recovery-error-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+
+<!-- Dynamic Success Notification Banner -->
+<div class="hidden flex-col gap-3 p-space-md rounded-xl bg-surface-container-low transition-all duration-300" id="success-banner">
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">mark_email_read</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-body-md font-medium text-on-surface">Check your inbox</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">15m expiration</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+  If an account exists for <span class="font-code-sm text-code-sm font-medium text-on-surface bg-surface-container-high px-1.5 py-0.5 rounded" id="success-target-email">your email</span>, you'll receive a password reset link shortly with instructions. Valid for 15 minutes.
+</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-2 border-t border-surface-container-high text-body-sm gap-2">
+<button class="cursor-not-allowed inline-flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant/70" disabled="" id="resend-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span id="countdown-text">Resend email (60s)</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Didn't receive email? Check spam folder.</span>
+</div>
+</div>
+
+<!-- Form Workspace -->
+<form class="flex flex-col gap-space-md" id="recovery-form" novalidate onsubmit="event.preventDefault();">
+<div class="flex flex-col gap-1.5">
+<label class="flex items-center justify-between font-label-md text-label-md text-on-surface" for="recovery-email">
+<span>Academic / Enterprise Email</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">e.g. .edu, .ac.uk</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-[20px] text-on-surface-variant pointer-events-none">mail</span>
+<input autocomplete="email" class="w-full pl-11 pr-4 py-2.5 bg-surface-container-low hover:bg-surface-container/60 focus:bg-surface-container-lowest text-on-surface placeholder:text-outline rounded-xl transition-all outline-none font-body-md text-body-md focus:shadow-[0_0_0_3px_rgba(99,91,219,0.18)]" id="recovery-email" placeholder="name@institution.edu" required="" type="email" value=""/>
+</div>
+</div>
+<!-- Submit Button Action -->
+<button class="w-full h-11 bg-primary-container hover:bg-primary text-on-primary rounded-xl font-label-md text-label-md tracking-wide shadow-md shadow-primary/20 flex items-center justify-center gap-2 transition-all duration-200 active:scale-[0.99] cursor-pointer" id="submit-action-btn" type="submit">
+<span class="material-symbols-outlined text-[19px]" id="submit-icon">send</span>
+<span id="submit-text">Send Reset Link</span>
+<span class="hidden w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" id="submit-spinner"></span>
+</button>
+</form>
+<!-- Divider with Subtle Technical Indicator -->
+<div class="relative flex items-center justify-center my-1">
+<div class="w-full h-px bg-surface-container"></div>
+<span class="absolute px-3 bg-surface-container-lowest font-code-sm text-code-sm text-on-surface-variant uppercase tracking-widest text-[10px]">Security Notice</span>
+</div>
+<!-- Campus SSO Context Module -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant shrink-0 mt-0.5">account_tree</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-medium">Single Sign-On (SSO) Notice</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              For campus SSO-managed university accounts, please contact your university IT administrator or CSE department portal.
+            </p>
+</div>
+</div>
+<!-- Secondary Navigation Footer Inside Card -->
+<div class="flex items-center justify-center pt-2">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-1 px-3 rounded-lg hover:bg-surface-container" data-path="sign-in" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Return to Sign In</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Supplementary Metadata Badge -->
+<div class="mt-space-lg flex items-center gap-space-lg text-on-surface-variant font-code-sm text-code-sm">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>SHA-256 ENCRYPTED</span>
+</span>
+<span>•</span>
+<span>EDUPASS PROTOCOL</span>
+<span>•</span>
+<span>SESSION 2FA COMPATIBLE</span>
+</div>
+</div>
+</div>
+<script>
+  (function initRecoveryWorkflow() {
+    const form = document.getElementById('recovery-form');
+    const emailInput = document.getElementById('recovery-email');
+    const submitBtn = document.getElementById('submit-action-btn');
+    const submitIcon = document.getElementById('submit-icon');
+    const submitText = document.getElementById('submit-text');
+    const submitSpinner = document.getElementById('submit-spinner');
+
+    const errorBanner = document.getElementById('recovery-error-banner');
+    const errorText = document.getElementById('recovery-error-text');
+    const closeErrorBtn = document.getElementById('close-recovery-error-btn');
+
+    const successBanner = document.getElementById('success-banner');
+    const successEmailSpan = document.getElementById('success-target-email');
+    const countdownEl = document.getElementById('countdown-text');
+    const resendBtn = document.getElementById('resend-btn');
+
+    let cooldownTimer = null;
+    let isSubmitting = false;
+
+    closeErrorBtn?.addEventListener('click', () => {
+      errorBanner.classList.add('hidden');
+    });
+
+    function startCooldown(seconds = 60) {
+      if (cooldownTimer) clearInterval(cooldownTimer);
+      let remaining = seconds;
+      resendBtn.disabled = true;
+      resendBtn.classList.add('cursor-not-allowed', 'text-on-surface-variant/70');
+      resendBtn.classList.remove('cursor-pointer', 'text-primary', 'hover:underline');
+      countdownEl.textContent = `Resend email (${remaining}s)`;
+
+      cooldownTimer = setInterval(() => {
+        remaining--;
+        if (remaining > 0) {
+          countdownEl.textContent = `Resend email (${remaining}s)`;
+        } else {
+          clearInterval(cooldownTimer);
+          countdownEl.textContent = 'Resend email now';
+          resendBtn.disabled = false;
+          resendBtn.classList.remove('cursor-not-allowed', 'text-on-surface-variant/70');
+          resendBtn.classList.add('cursor-pointer', 'text-primary', 'hover:underline');
+        }
+      }, 1000);
+    }
+
+    async function submitResetRequest(emailToReset) {
+      if (isSubmitting) return;
+
+      errorBanner.classList.add('hidden');
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailToReset || !emailRegex.test(emailToReset)) {
+        errorText.textContent = 'Please provide a valid institutional or registered email address.';
+        errorBanner.classList.remove('hidden');
+        emailInput.focus();
+        return;
+      }
+
+      isSubmitting = true;
+      submitBtn.disabled = true;
+      submitIcon.classList.add('hidden');
+      submitSpinner.classList.remove('hidden');
+      submitText.textContent = 'Transmitting...';
+
+      try {
+        const res = await fetch('/api/auth/reset-password', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: emailToReset })
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok && data.success) {
+          successEmailSpan.textContent = emailToReset;
+          successBanner.classList.remove('hidden');
+          successBanner.classList.add('flex');
+          startCooldown(60);
+
+          submitText.textContent = 'Reset Link Dispatched ✓';
+          submitSpinner.classList.add('hidden');
+          submitIcon.classList.remove('hidden');
+          submitIcon.textContent = 'done';
+
+          setTimeout(() => {
+            submitText.textContent = 'Send Reset Link';
+            submitIcon.textContent = 'send';
+            submitBtn.disabled = false;
+            isSubmitting = false;
+          }, 3000);
+          return;
+        }
+
+        // Server error
+        errorText.textContent = data.error || 'Failed to dispatch password recovery email. Please try again.';
+        errorBanner.classList.remove('hidden');
+
+        submitText.textContent = 'Send Reset Link';
+        submitIcon.classList.remove('hidden');
+        submitSpinner.classList.add('hidden');
+        submitBtn.disabled = false;
+        isSubmitting = false;
+
+      } catch (networkErr) {
+        errorText.textContent = 'Unable to reach the recovery service. Please check your connection and server.';
+        errorBanner.classList.remove('hidden');
+
+        submitText.textContent = 'Send Reset Link';
+        submitIcon.classList.remove('hidden');
+        submitSpinner.classList.add('hidden');
+        submitBtn.disabled = false;
+        isSubmitting = false;
+      }
+    }
+
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      submitResetRequest(emailInput.value.trim());
+    });
+
+    resendBtn?.addEventListener('click', () => {
+      if (!resendBtn.disabled && emailInput.value.trim()) {
+        submitResetRequest(emailInput.value.trim());
+      }
+    });
+
+  })();
+</script></main><footer class="w-full bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] py-space-lg"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant"><span>© 2025 SmartAssist AI Systems</span><span class="text-outline-variant">•</span><span class="font-code-sm text-code-sm">SECURE SOC-2</span></div><div class="flex items-center gap-space-lg font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="system-status" href="#"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span>System Status</span></a></div></div></footer>
+<script src="/node_modules/@supabase/supabase-js/dist/umd/supabase.js"></script>
+<script>if (!window.supabase) document.write('<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"><\/script>');</script>
+<script src="../supabase-client.js"></script>
+<script src="../shared-nav.js"></script>
+<script src="../sidebar.js"></script>
+</body></html>

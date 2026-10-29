@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SmartAssist AI - Portal</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#3b2fb3", "on-surface-variant": "#474554", "on-tertiary-fixed": "#131d26", "primary-fixed": "#e3dfff", "on-tertiary": "#ffffff", "primary": "#4a40c1", "tertiary-fixed-dim": "#bdc7d4", "tertiary-container": "#646e79", "on-secondary-fixed-variant": "#464555", "on-secondary-container": "#646373", "outline": "#777585", "on-tertiary-fixed-variant": "#3e4852", "secondary-fixed-dim": "#c8c4d7", "surface-container-high": "#e8e5ff", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#c4c0ff", "on-error-container": "#93000a", "secondary-container": "#e4e0f4", "inverse-primary": "#c4c0ff", "outline-variant": "#c8c4d6", "surface": "#fcf8ff", "primary-container": "#635bdb", "tertiary-fixed": "#d9e3f0", "on-tertiary-container": "#e7f1fe", "inverse-on-surface": "#f2efff", "error": "#ba1a1a", "surface-variant": "#e2e0fa", "secondary-fixed": "#e4e0f4", "on-secondary-fixed": "#1b1a28", "surface-tint": "#544bcb", "surface-bright": "#fcf8ff", "on-error": "#ffffff", "error-container": "#ffdad6", "surface-container": "#efecff", "tertiary": "#4c5660", "surface-container-highest": "#e2e0fa", "inverse-surface": "#2f2f42", "on-primary-fixed": "#120068", "secondary": "#5e5d6d", "surface-container-low": "#f5f2ff", "on-secondary": "#ffffff", "on-surface": "#1a1a2c", "background": "#fcf8ff", "on-background": "#1a1a2c", "surface-dim": "#dad7f1", "on-primary": "#ffffff", "on-primary-container": "#f2eeff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xl": "2rem", "space-2xl": "3rem", "margin": "1rem", "space-xs": "0.25rem", "space-md": "1rem", "space-lg": "1.5rem", "gutter-desktop": "1.5rem", "gutter": "1rem", "margin-desktop": "2rem" }, "fontFamily": { "label-md": ["Inter"], "headline-lg": ["Geist"], "headline-xl": ["Geist"], "body-sm": ["Inter"], "body-md": ["Inter"], "code-sm": ["JetBrains Mono"], "title-md": ["Geist"], "code-md": ["JetBrains Mono"], "body-lg": ["Inter"], "headline-xl-mobile": ["Geist"], "headline-lg-mobile": ["Geist"], "label-sm": ["JetBrains Mono"] }, "fontSize": { "label-md": ["0.8125rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }], "code-sm": ["0.75rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "title-md": ["1.125rem", { "lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "500" }], "code-md": ["0.875rem", { "lineHeight": "1.45rem", "fontWeight": "400" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "500" }] } } } };</script></head><body class="min-h-screen flex flex-col bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><a class="flex items-center gap-space-sm group" data-path="sign-in" href="#"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm group-hover:bg-primary transition-colors"><span class="material-symbols-outlined text-[20px]">auto_awesome</span></div><div class="flex flex-col"><span class="font-title-md text-title-md tracking-tight text-on-surface">SmartAssist AI</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Developer Portal</span></div></a><nav class="flex items-center gap-space-xs p-1 rounded-xl" data-active-classes="bg-surface-container-high text-on-surface font-medium"><a aria-current="page" class="px-space-md py-1.5 rounded-lg transition-colors bg-surface-container-high text-on-surface font-medium" data-path="sign-in" href="#">Sign In</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="create-account" href="#">Register</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-body-md text-body-md" data-path="reset-password" href="#">Recovery</a></nav><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span>API v2.4</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-16 bg-surface flex flex-col justify-center"><div class="flex flex-col w-full py-space-xl px-4 sm:px-space-lg lg:px-space-2xl items-center justify-center relative overflow-hidden">
+<!-- Subtle decorative ambient orbs -->
+<div class="absolute -top-28 -left-28 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-secondary-fixed/40 blur-3xl pointer-events-none"></div>
+<div class="w-full max-w-5xl flex flex-col items-center">
+<!-- Back to Welcome Breadcrumb -->
+<div class="w-full max-w-md sm:max-w-lg mb-space-md flex items-center justify-between">
+<a class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm group" data-path="welcome" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+<span>Back to Welcome</span>
+</a>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Screen 09 / Auth</span>
+</div>
+</div>
+<!-- Main Card Bento Shell -->
+<div class="w-full max-w-md sm:max-w-lg bg-surface-container-lowest rounded-xl shadow-xl shadow-surface-dim/40 overflow-hidden relative">
+<!-- Top Micro Status Bar -->
+<div class="h-1.5 w-full bg-gradient-to-r from-primary via-primary-container to-secondary-container"></div>
+<!-- Card Content Container -->
+<div class="p-6 sm:p-space-xl flex flex-col">
+<!-- Brand Header inside card -->
+<div class="flex items-center justify-between pb-space-md mb-space-md border-b-0">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</div>
+<span class="font-title-md text-title-md font-semibold text-on-surface">SmartAssist AI</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-code-sm text-code-sm font-medium">v2.4-prod</span>
+</div>
+<!-- Typography Heading -->
+<div class="space-y-1 mb-space-lg">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Welcome back</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign in to continue your conversations and workspace.</p>
+</div>
+<!-- Dynamic Prototype Notification Banner: Invalid Credentials (dismissible or toggleable) -->
+<div class="mb-space-md p-space-sm sm:p-3 rounded-lg bg-error-container text-on-error-container flex items-start gap-2.5 transition-all duration-300" id="credential-alert">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">error</span>
+<div class="flex-1">
+<p class="font-body-sm text-body-sm text-on-error-container font-medium leading-snug">
+              The email or password you entered is incorrect.
+            </p>
+<div class="mt-1.5 flex items-center gap-3 font-label-md text-label-md">
+<button class="text-error font-semibold hover:underline" onclick="document.getElementById('credential-alert').classList.add('hidden')" type="button">
+                Try again
+              </button>
+<span class="text-outline-variant font-normal">•</span>
+<a class="text-error font-semibold hover:underline" data-path="reset-password" href="#">
+                Reset password
+              </a>
+</div>
+</div>
+<button class="text-on-error-container/60 hover:text-on-error-container transition-colors" onclick="document.getElementById('credential-alert').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Sign In Form -->
+<form class="flex flex-col gap-space-md" id="signin-form" onsubmit="event.preventDefault(); window.location.href='#dashboard';">
+<!-- Field 1: Email Address -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="email">Email address</label>
+<!-- SSO eligible pill -->
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-primary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                SSO Eligible
+              </span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px] pointer-events-none">mail</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg pl-10 pr-4 py-2.5 outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#635BDB] transition-all" id="email" name="email" placeholder="name@organization.edu" required="" type="email" value="alex.chen@university.edu"/>
+</div>
+</div>
+<!-- Field 2: Password with Show/Hide Toggle -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="password">Password</label>
+<span class="font-code-sm text-code-sm text-on-surface-variant">auth::pwd</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px] pointer-events-none">lock</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg pl-10 pr-10 py-2.5 outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#635BDB] transition-all font-code-md text-code-md" id="password" name="password" placeholder="Enter your security phrase" required="" type="password" value="SecurePass2025!"/>
+<button class="absolute right-3 text-on-surface-variant hover:text-on-surface p-1 rounded transition-colors" id="toggle-pwd-btn" onclick="const p = document.getElementById('password'); const ic = document.getElementById('pwd-icon'); if(p.type==='password'){p.type='text'; ic.textContent='visibility_off';}else{p.type='password'; ic.textContent='visibility';}" title="Toggle password visibility" type="button">
+<span class="material-symbols-outlined text-[18px] block" id="pwd-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Field 3: Remember Me & Forgot Password Row -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded text-primary-container accent-primary-container bg-surface-container cursor-pointer" id="remember" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors select-none">Remember for 30 days</span>
+</label>
+<a class="font-label-md text-label-md text-primary font-medium hover:text-on-primary-fixed-variant transition-colors underline-offset-2 hover:underline" data-path="reset-password" href="#">
+              Forgot password?
+            </a>
+</div>
+<!-- Field 4: Primary CTA Button (Sign In) -->
+<button class="mt-space-xs w-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md py-3 px-space-lg rounded-lg shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2 group font-medium" type="submit">
+<span>Sign In</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+<!-- Field 5: Divider "or" -->
+<div class="relative my-space-lg flex items-center justify-center">
+<div class="w-full h-px bg-surface-container-high"></div>
+<span class="absolute px-3 bg-surface-container-lowest font-label-sm text-label-sm uppercase text-on-surface-variant tracking-widest">or</span>
+</div>
+<!-- External Auth Stack -->
+<div class="flex flex-col gap-2.5">
+<!-- Field 6: Continue with Google -->
+<button class="w-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center gap-3 shadow-none font-medium" type="button">
+<!-- Inline Google SVG icon for crisp reproduction -->
+<svg class="w-4 h-4 shrink-0" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path>
+</svg>
+<span>Continue with Google</span>
+</button>
+<!-- Field 7: University SSO Button -->
+<button class="w-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center gap-3 font-medium group" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:scale-110 transition-transform">school</span>
+<span>Sign in with University Credentials</span>
+</button>
+</div>
+<!-- Field 8: New User Link -->
+<div class="mt-space-lg text-center font-body-sm text-body-sm text-on-surface-variant">
+<span>Don't have an account?</span>
+<a class="ml-1 text-primary font-medium hover:text-on-primary-fixed-variant transition-colors underline-offset-2 hover:underline" data-path="create-account" href="#">
+            Create Account
+          </a>
+</div>
+</div>
+<!-- Quick Prototype Jump Bar: Destination Link -->
+<div class="bg-surface-container-high px-6 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-medium">Direct Prototype Route</span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary font-label-sm text-label-sm transition-all shadow-xs" data-path="main-chat-dashboard" href="#">
+<span>01 — Main Chat Dashboard</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Security & Institutional Trust Signals Bento Strip -->
+<div class="w-full max-w-md sm:max-w-lg mt-space-lg grid grid-cols-3 gap-2 text-center">
+<div class="p-2.5 rounded-lg bg-surface-container flex flex-col items-center">
+<span class="material-symbols-outlined text-[18px] text-primary mb-1">lock_clock</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">End-to-End</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Zero-Log Encryption</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex flex-col items-center">
+<span class="material-symbols-outlined text-[18px] text-primary mb-1">domain</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Campus SSO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">InCommon &amp; EduGain</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container flex flex-col items-center">
+<span class="material-symbols-outlined text-[18px] text-primary mb-1">format_image_left</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">FERPA / SOC2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Audited Compliance</span>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] py-space-lg"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant"><span>© 2025 SmartAssist AI Systems</span><span class="text-outline-variant">•</span><span class="font-code-sm text-code-sm">SECURE SOC-2</span></div><div class="flex items-center gap-space-lg font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="system-status" href="#"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span>System Status</span></a></div></div></footer></body></html>

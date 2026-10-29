@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#635bdb", "secondary-container": "#e4e0f4", "tertiary-fixed": "#d9e3f0", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#131d26", "error": "#ba1a1a", "on-secondary-fixed-variant": "#464555", "on-tertiary-container": "#e7f1fe", "surface-container": "#efecff", "surface-tint": "#544bcb", "secondary-fixed-dim": "#c8c4d7", "on-tertiary-fixed-variant": "#3e4852", "on-secondary-container": "#646373", "surface-container-highest": "#e2e0fa", "inverse-on-surface": "#f2efff", "secondary-fixed": "#e4e0f4", "outline-variant": "#c8c4d6", "inverse-primary": "#c4c0ff", "primary": "#4a40c1", "background": "#fcf8ff", "on-primary-container": "#f2eeff", "on-secondary-fixed": "#1b1a28", "tertiary-fixed-dim": "#bdc7d4", "secondary": "#5e5d6d", "surface-container-low": "#f5f2ff", "on-error": "#ffffff", "on-primary-fixed": "#120068", "on-background": "#1a1a2c", "on-error-container": "#93000a", "on-surface": "#1a1a2c", "surface-container-high": "#e8e5ff", "surface-variant": "#e2e0fa", "surface-bright": "#fcf8ff", "surface": "#fcf8ff", "primary-fixed": "#e3dfff", "tertiary-container": "#646e79", "surface-dim": "#dad7f1", "outline": "#777585", "on-primary-fixed-variant": "#3b2fb3", "inverse-surface": "#2f2f42", "primary-fixed-dim": "#c4c0ff", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "on-surface-variant": "#474554", "tertiary": "#4c5660", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter-desktop": "1.5rem", "space-2xl": "3rem", "margin": "1rem", "margin-desktop": "2rem", "gutter": "1rem", "space-xl": "2rem", "space-md": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-lg": [ "Geist" ], "title-md": [ "Geist" ], "headline-lg-mobile": [ "Geist" ], "code-md": [ "JetBrains Mono" ], "code-sm": [ "JetBrains Mono" ], "headline-xl-mobile": [ "Geist" ], "headline-xl": [ "Geist" ], "label-md": [ "Inter" ], "body-lg": [ "Inter" ], "label-sm": [ "JetBrains Mono" ], "body-sm": [ "Inter" ], "body-md": [ "Inter" ] }, "fontSize": { "headline-lg": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "title-md": [ "1.125rem", { "lineHeight": "1.625rem", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "headline-lg-mobile": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "code-md": [ "0.875rem", { "lineHeight": "1.45rem", "fontWeight": "400" } ], "code-sm": [ "0.75rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-xl-mobile": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-xl": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "label-md": [ "0.8125rem", { "lineHeight": "1rem", "letterSpacing": "0.01em", "fontWeight": "500" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "label-sm": [ "0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-sm": [ "0.75rem", { "lineHeight": "1.125rem", "fontWeight": "400" } ], "body-md": [ "0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" } ] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-hidden"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="SmartAssist AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1ULkDWHhUyiuszNbifO30_a2e5Di9i8gVUGCZfBAJd35ptLfr6cC2eDUqRW-O12LDhKZ5hkjWAk761vcBDsRDJq_kgjeTvKdjtaIA0B0UnuSkVAD5wAJTpXc3C770-o-8BVdSpOlSPaD1P4JPKZPzkzfissfoSqtJF0fXep9jVRWrTMRr9tp55_ITwUvOAtV4mnlpC70WvEO_p_a95qij1OBUNBDrVXwimEsORjivA6HmcT1Lk-oEzmZQ8"/><span class="font-title-md text-title-md text-on-surface">SmartAssist AI</span></div><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">keyboard_double_arrow_left</span></button></div><div class="px-space-md pt-space-xs pb-space-sm"><button class="w-full h-10 px-space-md rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-[0_1px_4px_rgba(99,91,219,0.25)] hover:bg-primary transition-all duration-200 active:scale-[0.98]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>New Chat</span></button></div><div class="px-space-md py-space-xs"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[18px] text-on-surface-variant">search</span><input class="w-full pl-9 pr-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container/30 transition-all" placeholder="Search chats..." type="text"/></div></div><div class="px-space-md pt-space-sm pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Navigation</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-secondary-container text-primary font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-secondary-container text-primary font-semibold" data-path="chat" href="#"><span class="material-symbols-outlined text-[20px]">chat_bubble</span><span>Chat</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="study-assistant" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Study Assistant</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="code-assistant" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span><span>Code Assistant</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="chat-with-pdf" href="#"><span class="material-symbols-outlined text-[20px]">picture_as_pdf</span><span>Chat with PDF</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></a></nav><div class="px-space-md pt-space-md pb-space-xs flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Recent Chats</span><span class="font-code-sm text-code-sm text-on-surface-variant">4</span></div><div class="flex-1 overflow-y-auto px-space-sm flex flex-col gap-0.5"><div class="group flex items-center justify-between px-space-sm py-1.5 rounded-lg hover:bg-surface-container cursor-pointer transition-colors"><div class="flex items-center gap-space-xs min-w-0"><span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">history</span><span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface truncate">Operating Systems Revision</span></div><button class="opacity-0 group-hover:opacity-100 p-0.5 hover:bg-surface-container-high rounded text-on-surface-variant transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">more_vert</span></button></div><div class="group flex items-center justify-between px-space-sm py-1.5 rounded-lg hover:bg-surface-container cursor-pointer transition-colors"><div class="flex items-center gap-space-xs min-w-0"><span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">history</span><span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface truncate">Python Code Debugging</span></div><button class="opacity-0 group-hover:opacity-100 p-0.5 hover:bg-surface-container-high rounded text-on-surface-variant transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">more_vert</span></button></div><div class="group flex items-center justify-between px-space-sm py-1.5 rounded-lg hover:bg-surface-container cursor-pointer transition-colors"><div class="flex items-center gap-space-xs min-w-0"><span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">history</span><span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface truncate">Database Normalization</span></div><button class="opacity-0 group-hover:opacity-100 p-0.5 hover:bg-surface-container-high rounded text-on-surface-variant transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">more_vert</span></button></div><div class="group flex items-center justify-between px-space-sm py-1.5 rounded-lg hover:bg-surface-container cursor-pointer transition-colors"><div class="flex items-center gap-space-xs min-w-0"><span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">history</span><span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface truncate">Machine Learning Basics</span></div><button class="opacity-0 group-hover:opacity-100 p-0.5 hover:bg-surface-container-high rounded text-on-surface-variant transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">more_vert</span></button></div></div></div><div class="p-space-md bg-surface-container/50 flex flex-col gap-space-sm"><div class="flex items-center justify-between"><div class="flex items-center gap-1 p-0.5 rounded-full bg-surface-container-highest"><button class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest shadow-sm text-on-surface font-label-sm text-label-sm" type="button"><span class="material-symbols-outlined text-[14px]">light_mode</span><span>Light</span></button><button class="flex items-center gap-1 px-2 py-0.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button"><span class="material-symbols-outlined text-[14px]">dark_mode</span><span>Dark</span></button></div><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" title="Collapse sidebar" type="button"><span class="material-symbols-outlined text-[18px]">dock_to_left</span></button></div><div class="flex items-center gap-space-sm pt-space-xs"><img alt="Profile" class="w-9 h-9 rounded-full object-cover ring-2 ring-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvAHnR1fa6JT1FVl0xNpyHbltLQ6aouT_8T0_F9c0bu1cwk8NOV6UjxPfiz_oEL56XT7CiojyccOAEMVCAYiNT8KA-hO_9r6PVeND9Y8FaeoHRgBU2WTUlpjDInBU4EXKcxhOIiZv4xmR0FJqs2FFHk55J3Sh7iiwKZUNI6PEUWFKP9AAfh3YZ98tHg0iFH0dwPf1Lzu_d0vaRq98n0G5DELNhP7IfWJHAvDZrB_VpmGyvSUC5b76t"/><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-1.5"><span class="font-label-md text-label-md text-on-surface truncate">Alex Chen</span><span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm shrink-0">CSE</span></div><span class="font-body-sm text-body-sm text-on-surface-variant truncate">School of Computing</span></div></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><img alt="SmartAssist AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1ULkDWHhUyiuszNbifO30_a2e5Di9i8gVUGCZfBAJd35ptLfr6cC2eDUqRW-O12LDhKZ5hkjWAk761vcBDsRDJq_kgjeTvKdjtaIA0B0UnuSkVAD5wAJTpXc3C770-o-8BVdSpOlSPaD1P4JPKZPzkzfissfoSqtJF0fXep9jVRWrTMRr9tp55_ITwUvOAtV4mnlpC70WvEO_p_a95qij1OBUNBDrVXwimEsORjivA6HmcT1Lk-oEzmZQ8"/><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="text-on-surface-variant">Workspace</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="text-on-surface font-label-md text-label-md">Active Session</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container font-code-sm text-code-sm text-primary"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span>Gemini 1.5 Pro</span></div><div class="flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container-low font-code-sm text-code-sm text-tertiary"><span class="material-symbols-outlined text-[14px]">bolt</span><span>45ms</span></div></div><div class="flex items-center gap-space-xs text-on-surface-variant"><button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="w-2 h-2 rounded-full bg-primary-container absolute top-1.5 right-1.5"></span></button></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvAHnR1fa6JT1FVl0xNpyHbltLQ6aouT_8T0_F9c0bu1cwk8NOV6UjxPfiz_oEL56XT7CiojyccOAEMVCAYiNT8KA-hO_9r6PVeND9Y8FaeoHRgBU2WTUlpjDInBU4EXKcxhOIiZv4xmR0FJqs2FFHk55J3Sh7iiwKZUNI6PEUWFKP9AAfh3YZ98tHg0iFH0dwPf1Lzu_d0vaRq98n0G5DELNhP7IfWJHAvDZrB_VpmGyvSUC5b76t"/></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-36">
+<!-- Top Session Context Pill Banner -->
+<div class="w-full max-w-5xl mx-auto px-space-lg pt-space-md">
+<div class="flex items-center justify-between py-2 px-space-md rounded-full bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container text-primary font-code-sm text-code-sm">OS</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate">Thread: Operating Systems Fundamentals &amp; Concurrency</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant shrink-0">#CS-304</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-secondary font-code-sm text-code-sm">2 turns</span>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors px-2 py-1 rounded-lg hover:bg-surface-container-high" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark</span>
+<span>Save Thread</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Chat Flow Container -->
+<div class="w-full max-w-5xl mx-auto px-space-lg pt-space-lg flex flex-col gap-space-xl">
+<!-- 1. USER QUERY CARD -->
+<div class="flex justify-end w-full">
+<div class="flex items-start gap-space-sm max-w-2xl w-full justify-end">
+<div class="flex flex-col items-end gap-1.5 w-full">
+<div class="flex items-center gap-2 px-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Alex Chen</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">10:42 AM</span>
+</div>
+<!-- User Bubble -->
+<div class="p-space-md rounded-2xl rounded-tr-xs bg-primary-container text-on-primary-container shadow-md shadow-primary-container/20 w-auto">
+<p class="font-body-md text-body-md text-on-primary-container leading-relaxed">
+              Explain the difference between a process and a thread in operating systems with a simple example.
+            </p>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-code-sm text-code-sm px-1">
+<span class="material-symbols-outlined text-[14px] text-primary">done_all</span>
+<span>Synthesized with CS Context</span>
+</div>
+</div>
+<img alt="Alex Chen Profile" class="w-10 h-10 rounded-full object-cover shrink-0 ring-2 ring-primary-container/30 shadow-sm mt-0.5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvAHnR1fa6JT1FVl0xNpyHbltLQ6aouT_8T0_F9c0bu1cwk8NOV6UjxPfiz_oEL56XT7CiojyccOAEMVCAYiNT8KA-hO_9r6PVeND9Y8FaeoHRgBU2WTUlpjDInBU4EXKcxhOIiZv4xmR0FJqs2FFHk55J3Sh7iiwKZUNI6PEUWFKP9AAfh3YZ98tHg0iFH0dwPf1Lzu_d0vaRq98n0G5DELNhP7IfWJHAvDZrB_VpmGyvSUC5b76t"/>
+</div>
+</div>
+<!-- 2. AI ASSISTANT RESPONSE CARD -->
+<div class="flex items-start gap-space-md w-full">
+<!-- AI Avatar with Brand Spark & Indigo Glow -->
+<div class="relative shrink-0 mt-1">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-primary-container p-0.5 shadow-lg shadow-primary/25 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">neurology</span>
+</div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[11px] text-primary-container">auto_awesome</span>
+</div>
+</div>
+<!-- Assistant Card Outer -->
+<div class="flex flex-col flex-1 min-w-0 bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg space-y-space-md">
+<!-- Header Row -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-md text-title-md text-on-surface font-semibold">SmartAssist AI</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-code-sm text-code-sm">OS / Concurrency Engine</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+              Verified
+            </span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">10:42 AM</span>
+</div>
+<!-- Heading & Lead Paragraph -->
+<div class="space-y-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Process vs Thread</h2>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+            A process is a program in execution with its own memory space and system resources. A thread is a smaller unit of execution within a process.
+          </p>
+</div>
+<!-- Comparative Metric Infographic / Overview Bento Strip -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Process Scope</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Heavy isolation: Owns PCB, registers, stack, heap, and file descriptors.</div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">reorder</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Thread Scope</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Light execution: Shares text, data, and OS handles, maintaining private stacks.</div>
+</div>
+</div>
+</div>
+<!-- Comparison Table -->
+<div class="rounded-xl overflow-hidden bg-surface-container-low shadow-xs">
+<div class="px-space-md py-2.5 bg-surface-container flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Architectural Comparison</span>
+<span class="font-code-sm text-code-sm text-secondary">POSIX &amp; Windows NT Model</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/60 text-on-surface-variant font-label-md text-label-md">
+<th class="py-2.5 px-space-md font-semibold">Feature</th>
+<th class="py-2.5 px-space-md font-semibold">Process</th>
+<th class="py-2.5 px-space-md font-semibold">Thread</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y-0 text-on-surface">
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3 px-space-md font-medium text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">memory</span>
+<span>Memory</span>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Separate address space</td>
+<td class="py-3 px-space-md text-primary font-medium">Shares process memory</td>
+</tr>
+<tr class="bg-surface-container-lowest/60 hover:bg-surface-container/40 transition-colors">
+<td class="py-3 px-space-md font-medium text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">speed</span>
+<span>Creation</span>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Usually more resource-intensive</td>
+<td class="py-3 px-space-md text-primary font-medium">Usually lighter-weight</td>
+</tr>
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3 px-space-md font-medium text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">sync_alt</span>
+<span>Communication</span>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Requires inter-process communication (IPC)</td>
+<td class="py-3 px-space-md text-primary font-medium">Can communicate through shared memory</td>
+</tr>
+<tr class="bg-surface-container-lowest/60 hover:bg-surface-container/40 transition-colors">
+<td class="py-3 px-space-md font-medium text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">shield</span>
+<span>Failure impact</span>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Often isolated from other processes</td>
+<td class="py-3 px-space-md text-error font-medium">Can affect the same process</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Subheading & Analogy Card -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">lightbulb</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Simple example</h3>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row gap-space-md items-center">
+<!-- Visual Analogy Illustration / Schematic -->
+<div class="w-full md:w-56 shrink-0 h-36 rounded-lg bg-surface-container p-3 flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">globe</span> Browser Instance
+                </span>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-code-sm">PID: 8092</span>
+</div>
+<!-- Animated Thread Visual Representation -->
+<div class="space-y-1.5 my-auto">
+<div class="p-1.5 rounded bg-surface-container-lowest shadow-xs flex items-center justify-between text-[11px] font-code-sm text-on-surface">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Thread 1: UI Engine</span>
+<span class="text-tertiary text-[10px]">Active</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container-lowest shadow-xs flex items-center justify-between text-[11px] font-code-sm text-on-surface">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>Thread 2: Audio stream</span>
+<span class="text-tertiary text-[10px]">Working</span>
+</div>
+<div class="p-1.5 rounded bg-surface-container-lowest shadow-xs flex items-center justify-between text-[11px] font-code-sm text-on-surface">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>Thread 3: Network fetch</span>
+<span class="text-tertiary text-[10px]">Idle</span>
+</div>
+</div>
+<div class="text-[10px] text-on-surface-variant font-code-sm flex justify-between">
+<span>Memory Boundary</span>
+<span>Protected Address</span>
+</div>
+</div>
+<!-- Bullet Points -->
+<div class="flex flex-col gap-2.5 flex-1 min-w-0">
+<div class="flex items-start gap-2.5">
+<div class="mt-1 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary">window</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">A web browser:</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                    A browser process provides an isolated execution environment. If one tab or sandboxed process encounters a critical fault, other processes keep running safely.
+                  </p>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<div class="mt-1 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary">alt_route</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Multiple threads:</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                    Multiple threads within a process can handle tasks such as processing input or performing background work (e.g., rendering pixels while asynchronously downloading video data).
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Code Snippet Box -->
+<div class="rounded-xl overflow-hidden bg-[#151520] shadow-md">
+<div class="flex items-center justify-between px-space-md py-2 bg-[#1c1c2a]">
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-code-sm text-emerald-400 font-medium">python</span>
+<span class="font-code-sm text-code-sm text-secondary-fixed-dim">threading_example.py</span>
+</div>
+<button class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high/20 hover:bg-surface-container-high/40 text-on-primary-container text-xs transition-colors" data-code="import threading
+import time
+
+def background_task(task_name):
+    print(f'Thread {task_name}: running concurrently')
+    time.sleep(1)
+    print(f'Thread {task_name}: finished')
+
+# Spawn two lightweight threads inside the current process
+t1 = threading.Thread(target=background_task, args=('Alpha',))
+t2 = threading.Thread(target=background_task, args=('Beta',))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+print('Main process execution resumed')" onclick="navigator.clipboard.writeText(this.dataset.code); this.querySelector('span:last-child').textContent='Copied!'; setTimeout(() =&gt; this.querySelector('span:last-child').textContent='Copy', 1800);" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span class="font-label-sm text-label-sm">Copy</span>
+</button>
+</div>
+<pre class="p-space-md font-code-md text-code-md text-gray-200 overflow-x-auto leading-relaxed"><code><span class="text-purple-400">import</span> threading
+<span class="text-purple-400">import</span> time
+
+<span class="text-purple-400">def</span> <span class="text-blue-400">background_task</span>(task_name):
+    <span class="text-emerald-400">print</span>(<span class="text-amber-300">f"Thread {task_name}: running concurrently"</span>)
+    time.<span class="text-blue-400">sleep</span>(<span class="text-orange-400">1</span>)
+    <span class="text-emerald-400">print</span>(<span class="text-amber-300">f"Thread {task_name}: finished"</span>)
+
+<span class="text-gray-500"># Spawn two lightweight threads inside the current process</span>
+t1 = threading.<span class="text-blue-400">Thread</span>(target=background_task, args=(<span class="text-amber-300">"Alpha"</span>,))
+t2 = threading.<span class="text-blue-400">Thread</span>(target=background_task, args=(<span class="text-amber-300">"Beta"</span>,))
+
+t1.<span class="text-blue-400">start</span>()
+t2.<span class="text-blue-400">start</span>()
+
+t1.<span class="text-blue-400">join</span>()
+t2.<span class="text-blue-400">join</span>()
+<span class="text-emerald-400">print</span>(<span class="text-amber-300">"Main process execution resumed"</span>)</code></pre>
+</div>
+<!-- Key Takeaway Highlight Box -->
+<div class="p-space-md rounded-xl bg-secondary-container/70 flex items-start gap-space-sm shadow-xs">
+<div class="p-1 rounded-full bg-primary-container text-white shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">key</span>
+</div>
+<div class="flex-1">
+<span class="font-label-md text-label-md text-primary font-semibold uppercase tracking-wider">Key Takeaway</span>
+<p class="font-body-md text-body-md text-on-surface font-medium mt-0.5">
+              Processes provide stronger isolation, while threads enable concurrent work within the same process.
+            </p>
+</div>
+</div>
+<!-- Actions Toolbar -->
+<div class="flex flex-wrap items-center justify-between pt-space-xs gap-space-sm">
+<div class="flex items-center gap-1.5 flex-wrap">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md shadow-xs active:scale-95" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>Copy Response</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md shadow-xs active:scale-95" type="button">
+<span class="material-symbols-outlined text-[16px]">autorenew</span>
+<span>Regenerate</span>
+</button>
+<div class="h-4 w-[1px] bg-outline-variant mx-1"></div>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors active:scale-90" title="Helpful" type="button">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-error hover:bg-surface-container-high transition-colors active:scale-90" title="Not helpful" type="button">
+<span class="material-symbols-outlined text-[18px]">thumb_down</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>Share</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary-fixed text-on-primary-fixed-variant hover:bg-primary-fixed-dim transition-colors font-label-md text-label-md font-medium" type="button">
+<span class="material-symbols-outlined text-[16px]">note_add</span>
+<span>Export as Notes</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Suggested Follow-Up Prompts Chips -->
+<div class="flex flex-col gap-2 pl-14">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Suggested Inquiries</span>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-primary hover:bg-secondary-container transition-all text-body-sm font-body-sm shadow-xs flex items-center gap-1.5" onclick="document.getElementById('chat-input').value = this.innerText.replace('↳ ', '')" type="button">
+<span>↳ Show multithreading in C++</span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-primary hover:bg-secondary-container transition-all text-body-sm font-body-sm shadow-xs flex items-center gap-1.5" onclick="document.getElementById('chat-input').value = this.innerText.replace('↳ ', '')" type="button">
+<span>↳ Explain IPC mechanisms (Pipes, Sockets, Shared Memory)</span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-primary hover:bg-secondary-container transition-all text-body-sm font-body-sm shadow-xs flex items-center gap-1.5" onclick="document.getElementById('chat-input').value = this.innerText.replace('↳ ', '')" type="button">
+<span>↳ What causes race conditions in multithreading?</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. FIXED BOTTOM CHAT COMPOSER DOCK -->
+<div class="fixed bottom-0 left-[260px] right-0 bg-gradient-to-t from-surface via-surface/95 to-transparent pb-6 pt-6 px-space-lg z-30">
+<div class="max-w-4xl mx-auto flex flex-col gap-2">
+<!-- Composer Body -->
+<div class="p-2 rounded-2xl bg-surface-container-lowest shadow-xl shadow-primary/5 ring-1 ring-surface-container-high transition-all focus-within:ring-2 focus-within:ring-primary-container">
+<div class="relative flex items-center">
+<textarea class="w-full pl-3 pr-28 py-2.5 bg-transparent resize-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none" id="chat-input" placeholder="Ask a follow-up question... (e.g., Show multithreading in C++)" rows="1" style="min-height: 44px; max-height: 120px;"></textarea>
+<!-- Composer Internal Actions -->
+<div class="absolute right-2 flex items-center gap-1">
+<button class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" title="Attach file or code" type="button">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl transition-colors" title="Audio dictation" type="button">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+<button class="w-9 h-9 rounded-xl bg-primary-container hover:bg-primary text-white flex items-center justify-center transition-all shadow-sm active:scale-95 shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Context Toolbar under composer -->
+<div class="flex items-center justify-between px-2 text-on-surface-variant font-code-sm text-code-sm">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span>OS Domain Enabled</span>
+</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-code-sm">Shift + Return</kbd>
+<span>for new line</span>
+</span>
+</div>
+<div class="flex items-center gap-1.5 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>Workspace synced</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple auto-grow for textarea
+  const textarea = document.getElementById('chat-input');
+  if (textarea) {
+    textarea.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = (this.scrollHeight) + 'px';
+    });
+  }
+</script></main></div></body></html>
